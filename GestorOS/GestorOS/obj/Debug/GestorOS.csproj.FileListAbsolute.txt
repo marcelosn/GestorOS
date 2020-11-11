@@ -1,0 +1,57 @@
+C:\Users\USER\Desktop\GestorOS\GestorOS\bin\Debug\GestorOS.exe.config
+C:\Users\USER\Desktop\GestorOS\GestorOS\bin\Debug\GestorOS.exe
+C:\Users\USER\Desktop\GestorOS\GestorOS\bin\Debug\GestorOS.pdb
+C:\Users\USER\Desktop\GestorOS\GestorOS\bin\Debug\EntityFramework.dll
+C:\Users\USER\Desktop\GestorOS\GestorOS\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\USER\Desktop\GestorOS\GestorOS\bin\Debug\EntityFramework.xml
+C:\Users\USER\Desktop\GestorOS\GestorOS\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\USER\Desktop\GestorOS\GestorOS\obj\Debug\GestorOS.Properties.Resources.resources
+C:\Users\USER\Desktop\GestorOS\GestorOS\obj\Debug\GestorOS.csproj.GenerateResource.cache
+C:\Users\USER\Desktop\GestorOS\GestorOS\obj\Debug\GestorOS.csproj.CoreCompileInputs.cache
+C:\Users\USER\Desktop\GestorOS\GestorOS\obj\Debug\GestorOS.csproj.CopyComplete
+C:\Users\USER\Desktop\GestorOS\GestorOS\obj\Debug\GestorOS.exe
+C:\Users\USER\Desktop\GestorOS\GestorOS\obj\Debug\GestorOS.pdb
+C:\Users\USER\Desktop\GestorOS\GestorOS\obj\Debug\GestorOS.FrmPrincipal.resources
+C:\Users\USER\Desktop\GestorOS\GestorOS\obj\Debug\GestorOS.csprojAssemblyReference.cache
+C:\Users\USER\Desktop\GestorOS\GestorOS\obj\Debug\GestorOS.FrmTodasOrdemServico.resources
+C:\Users\USER\Desktop\GestorOS\GestorOS\obj\Debug\GestorOS.FrmOrdemServico.resources
+C:\Users\USER\Desktop\AREA TRABALHO LUIS_IPERON\GestorOS\GestorOS\bin\Debug\GestorOS.exe.config
+C:\Users\USER\Desktop\AREA TRABALHO LUIS_IPERON\GestorOS\GestorOS\bin\Debug\GestorOS.exe
+C:\Users\USER\Desktop\AREA TRABALHO LUIS_IPERON\GestorOS\GestorOS\bin\Debug\GestorOS.pdb
+C:\Users\USER\Desktop\AREA TRABALHO LUIS_IPERON\GestorOS\GestorOS\bin\Debug\EntityFramework.dll
+C:\Users\USER\Desktop\AREA TRABALHO LUIS_IPERON\GestorOS\GestorOS\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\USER\Desktop\AREA TRABALHO LUIS_IPERON\GestorOS\GestorOS\bin\Debug\EntityFramework.xml
+C:\Users\USER\Desktop\AREA TRABALHO LUIS_IPERON\GestorOS\GestorOS\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\USER\Desktop\AREA TRABALHO LUIS_IPERON\GestorOS\GestorOS\obj\Debug\GestorOS.csprojAssemblyReference.cache
+C:\Users\USER\Desktop\AREA TRABALHO LUIS_IPERON\GestorOS\GestorOS\obj\Debug\GestorOS.FrmOrdemServico.resources
+C:\Users\USER\Desktop\AREA TRABALHO LUIS_IPERON\GestorOS\GestorOS\obj\Debug\GestorOS.FrmPrincipal.resources
+C:\Users\USER\Desktop\AREA TRABALHO LUIS_IPERON\GestorOS\GestorOS\obj\Debug\GestorOS.FrmTodasOrdemServico.resources
+C:\Users\USER\Desktop\AREA TRABALHO LUIS_IPERON\GestorOS\GestorOS\obj\Debug\GestorOS.Properties.Resources.resources
+C:\Users\USER\Desktop\AREA TRABALHO LUIS_IPERON\GestorOS\GestorOS\obj\Debug\GestorOS.csproj.GenerateResource.cache
+C:\Users\USER\Desktop\AREA TRABALHO LUIS_IPERON\GestorOS\GestorOS\obj\Debug\GestorOS.csproj.CoreCompileInputs.cache
+C:\Users\USER\Desktop\AREA TRABALHO LUIS_IPERON\GestorOS\GestorOS\obj\Debug\GestorOS.csproj.CopyComplete
+C:\Users\USER\Desktop\AREA TRABALHO LUIS_IPERON\GestorOS\GestorOS\obj\Debug\GestorOS.exe
+C:\Users\USER\Desktop\AREA TRABALHO LUIS_IPERON\GestorOS\GestorOS\obj\Debug\GestorOS.pdb
+C:\Users\USER\Desktop\AREA TRABALHO LUIS_IPERON\GestorOS\GestorOS\obj\Debug\GestorOS.FrmBuscarProdutoServico.resources
+C:\Users\USER\Desktop\AREA TRABALHO LUIS_IPERON\GestorOS\GestorOS\obj\Debug\GestorOS.FrmAdicionarItensOS.resources
+C:\Users\USER\Desktop\AREA TRABALHO LUIS_IPERON\GestorOS\GestorOS\obj\Debug\GestorOS.FrmTodosFuncionarios.resources
+C:\Users\USER\Documents\GitHub\GestorOS\GestorOS\bin\Debug\GestorOS.exe.config
+C:\Users\USER\Documents\GitHub\GestorOS\GestorOS\bin\Debug\GestorOS.exe
+C:\Users\USER\Documents\GitHub\GestorOS\GestorOS\bin\Debug\GestorOS.pdb
+C:\Users\USER\Documents\GitHub\GestorOS\GestorOS\bin\Debug\EntityFramework.dll
+C:\Users\USER\Documents\GitHub\GestorOS\GestorOS\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\USER\Documents\GitHub\GestorOS\GestorOS\bin\Debug\EntityFramework.xml
+C:\Users\USER\Documents\GitHub\GestorOS\GestorOS\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\USER\Documents\GitHub\GestorOS\GestorOS\obj\Debug\GestorOS.csprojAssemblyReference.cache
+C:\Users\USER\Documents\GitHub\GestorOS\GestorOS\obj\Debug\GestorOS.FrmAdicionarItensOS.resources
+C:\Users\USER\Documents\GitHub\GestorOS\GestorOS\obj\Debug\GestorOS.FrmBuscarProdutoServico.resources
+C:\Users\USER\Documents\GitHub\GestorOS\GestorOS\obj\Debug\GestorOS.FrmOrdemServico.resources
+C:\Users\USER\Documents\GitHub\GestorOS\GestorOS\obj\Debug\GestorOS.FrmPrincipal.resources
+C:\Users\USER\Documents\GitHub\GestorOS\GestorOS\obj\Debug\GestorOS.FrmTodasOrdemServico.resources
+C:\Users\USER\Documents\GitHub\GestorOS\GestorOS\obj\Debug\GestorOS.FrmTodosFuncionarios.resources
+C:\Users\USER\Documents\GitHub\GestorOS\GestorOS\obj\Debug\GestorOS.Properties.Resources.resources
+C:\Users\USER\Documents\GitHub\GestorOS\GestorOS\obj\Debug\GestorOS.csproj.GenerateResource.cache
+C:\Users\USER\Documents\GitHub\GestorOS\GestorOS\obj\Debug\GestorOS.csproj.CoreCompileInputs.cache
+C:\Users\USER\Documents\GitHub\GestorOS\GestorOS\obj\Debug\GestorOS.csproj.CopyComplete
+C:\Users\USER\Documents\GitHub\GestorOS\GestorOS\obj\Debug\GestorOS.exe
+C:\Users\USER\Documents\GitHub\GestorOS\GestorOS\obj\Debug\GestorOS.pdb
