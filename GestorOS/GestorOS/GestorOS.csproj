@@ -86,17 +86,23 @@
     <Compile Include="FrmTodasOrdemServico.Designer.cs">
       <DependentUpon>FrmTodasOrdemServico.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmTodosClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTodosClientes.Designer.cs">
+      <DependentUpon>FrmTodosClientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmTodosFuncionarios.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmTodosFuncionarios.Designer.cs">
       <DependentUpon>FrmTodosFuncionarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmTodosProdutos.cs">
+    <Compile Include="FrmTodosObjetos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmTodosProdutos.Designer.cs">
-      <DependentUpon>FrmTodosProdutos.cs</DependentUpon>
+    <Compile Include="FrmTodosObjetos.Designer.cs">
+      <DependentUpon>FrmTodosObjetos.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Caixa.cs" />
@@ -136,8 +142,14 @@
     <EmbeddedResource Include="FrmTodasOrdemServico.resx">
       <DependentUpon>FrmTodasOrdemServico.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmTodosClientes.resx">
+      <DependentUpon>FrmTodosClientes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmTodosFuncionarios.resx">
       <DependentUpon>FrmTodosFuncionarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTodosObjetos.resx">
+      <DependentUpon>FrmTodosObjetos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

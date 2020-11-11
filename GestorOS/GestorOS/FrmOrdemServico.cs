@@ -187,28 +187,28 @@ namespace GestorOS
 
         private void btnBuscarCliente_Click(object sender, EventArgs e)
         {
-            //FrmTodosClientes frmTodosClientes = new FrmTodosClientes();
-            //frmTodosClientes.ShowDialog();
+            FrmTodosClientes frmTodosClientes = new FrmTodosClientes();
+            frmTodosClientes.ShowDialog();
 
-            //if (frmTodosClientes.cliente != null)
-            //{
-            //    txtCodigoCliente.Text = frmTodosClientes.cliente.Id.ToString();
-            //    txtNomeCliente.Text = frmTodosClientes.cliente.NomeFantasia;
-            //    txtCelular.Text = frmTodosClientes.cliente.Celular;
-            //    txtDocumentoCliente.Text = frmTodosClientes.cliente.Documento;
-            //}
+            if (frmTodosClientes.cliente != null)
+            {
+                txtCodigoCliente.Text = frmTodosClientes.cliente.Id.ToString();
+                txtNomeCliente.Text = frmTodosClientes.cliente.NomeFantasia;
+                txtCelular.Text = frmTodosClientes.cliente.Celular;
+                txtDocumento.Text = frmTodosClientes.cliente.Documento;
+            }
         }
 
         private void btnBuscarObjeto_Click(object sender, EventArgs e)
         {
-            //FrmTodosObjetos frmTodosObjetos = new FrmTodosObjetos();
-            //frmTodosObjetos.ShowDialog();
+            FrmTodosObjetos frmTodosObjetos = new FrmTodosObjetos();
+            frmTodosObjetos.ShowDialog();
 
-            //if (frmTodosObjetos.objeto != null)
-            //{
-            //    txtCodigoEquipamento.Text = frmTodosObjetos.objeto.Id.ToString();
-            //    txtNomeObjetoEquipamento.Text = frmTodosObjetos.objeto.Nome;
-            //}
+            if (frmTodosObjetos.objeto != null)
+            {
+                txtCodigoObjeto.Text = frmTodosObjetos.objeto.Id.ToString();
+                txtNomeObjeto.Text = frmTodosObjetos.objeto.Nome;
+            }
         }
 
         private void btnRemoverItem_Click(object sender, EventArgs e)
