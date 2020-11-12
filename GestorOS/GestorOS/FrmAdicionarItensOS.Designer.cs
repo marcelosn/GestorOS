@@ -341,8 +341,7 @@
             this.btnSalvar.Location = new System.Drawing.Point(131, 387);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(209, 41);
-            this.btnSalvar.TabIndex = 5;
-            this.btnSalvar.TabStop = false;
+            this.btnSalvar.TabIndex = 7;
             this.btnSalvar.Text = "Salvar  e Finalizar - F4";
             this.btnSalvar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSalvar.UseVisualStyleBackColor = true;
@@ -356,7 +355,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(346, 387);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(158, 41);
-            this.btnCancelar.TabIndex = 4;
+            this.btnCancelar.TabIndex = 8;
             this.btnCancelar.TabStop = false;
             this.btnCancelar.Text = "Cancelar - ESC";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;

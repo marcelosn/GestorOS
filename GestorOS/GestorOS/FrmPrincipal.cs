@@ -27,5 +27,38 @@ namespace GestorOS
             FrmTodasOrdemServico frmTodasOrdemServico = new FrmTodasOrdemServico();
             frmTodasOrdemServico.ShowDialog();
         }
+
+        private void tsClientes_Click(object sender, EventArgs e)
+        {
+            FrmTodosClientes frmTodosClientes = new FrmTodosClientes();
+            frmTodosClientes.ShowDialog();
+        }
+
+        private void tsProdutos_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void tsServicos_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void tsFuncionarios_Click(object sender, EventArgs e)
+        {
+            FrmTodosFuncionarios frmTodosFuncionarios = new FrmTodosFuncionarios();
+            frmTodosFuncionarios.ShowDialog();
+        }
+
+        private void tsUnidadeMedida_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tsObjetos_Click(object sender, EventArgs e)
+        {
+            FrmTodosObjetos frmTodosObjetos = new FrmTodosObjetos();
+            frmTodosObjetos.ShowDialog();
+        }
     }
 }

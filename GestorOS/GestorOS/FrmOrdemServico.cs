@@ -14,7 +14,7 @@ namespace GestorOS
         MeuDataContext meuDataContext;
         IList<OrdemServicoItem> listaItemOrdemServico = new List<OrdemServicoItem>();
         int item = 1;
-        int codigoOperador = 2;
+        int codigoOperador = 1;
         int qtde;
         decimal valorTotalServico;
         decimal valorTotalProduto;
@@ -46,7 +46,7 @@ namespace GestorOS
             txtDataPrevisaoEntrega.Focus();
             btnRemoverItem.Enabled = false;
             btnSalvar.Enabled = false;
-            btnSalvar.Enabled = false;
+            btnFinalizar.Enabled = false;
             CarregaSituacaoOrdemServico();
         }
 
@@ -135,7 +135,7 @@ namespace GestorOS
 
                 //Habilita comandos basicos
                 btnSalvar.Enabled = true;
-                btnSalvar.Enabled = true;
+                btnFinalizar.Enabled = true;
                 btnRemoverItem.Enabled = true;
 
                 //Totalizadores
@@ -261,6 +261,8 @@ namespace GestorOS
             txtDocumento.Clear();
             txtCodigoObjeto.Clear();
             txtNomeObjeto.Clear();
+            txtDescricaoDefeito.Clear();
+            txtObservacoesGerais.Clear();
 
             lwItensOrdemServico.Items.Clear();
 
@@ -343,6 +345,7 @@ namespace GestorOS
             {
                 var ordemServicoItem = new OrdemServicoItem()
                 {
+                    DataHoraCadastro = DateTime.Now,
                     OrdemServicoId = ordemServicoId,
                     Item = item.Item,
                     FuncionarioId = item.FuncionarioId,

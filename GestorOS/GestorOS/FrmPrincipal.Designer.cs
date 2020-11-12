@@ -189,6 +189,7 @@
             this.tsClientes.Text = "Clientes";
             this.tsClientes.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.tsClientes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.tsClientes.Click += new System.EventHandler(this.tsClientes_Click);
             // 
             // toolStripSeparator1
             // 
@@ -206,6 +207,7 @@
             this.tsProdutos.Text = "Produtos";
             this.tsProdutos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.tsProdutos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.tsProdutos.Click += new System.EventHandler(this.tsProdutos_Click);
             // 
             // toolStripSeparator2
             // 
@@ -222,6 +224,7 @@
             this.tsServicos.Size = new System.Drawing.Size(36, 36);
             this.tsServicos.Text = "Serviços";
             this.tsServicos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.tsServicos.Click += new System.EventHandler(this.tsServicos_Click);
             // 
             // toolStripSeparator3
             // 
@@ -238,6 +241,7 @@
             this.tsFuncionarios.Size = new System.Drawing.Size(36, 36);
             this.tsFuncionarios.Text = "Funcionários";
             this.tsFuncionarios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.tsFuncionarios.Click += new System.EventHandler(this.tsFuncionarios_Click);
             // 
             // toolStripSeparator5
             // 
@@ -254,6 +258,7 @@
             this.tsUnidadeMedida.Size = new System.Drawing.Size(36, 36);
             this.tsUnidadeMedida.Text = "Unidade de Medida";
             this.tsUnidadeMedida.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.tsUnidadeMedida.Click += new System.EventHandler(this.tsUnidadeMedida_Click);
             // 
             // toolStripSeparator6
             // 
@@ -271,6 +276,7 @@
             this.tsObjetos.Text = "Objetos";
             this.tsObjetos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tsObjetos.ToolTipText = "Objetos ou equipamentos";
+            this.tsObjetos.Click += new System.EventHandler(this.tsObjetos_Click);
             // 
             // toolStripSeparator4
             // 

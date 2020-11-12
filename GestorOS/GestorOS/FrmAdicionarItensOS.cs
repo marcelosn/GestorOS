@@ -9,6 +9,7 @@ namespace GestorOS
         //Armazena-serviço ou produto e item ordem servico
         Produto produto;
         Servico servico;
+
         public OrdemServicoItem ordemServicoItem;
         decimal subTotal;
 

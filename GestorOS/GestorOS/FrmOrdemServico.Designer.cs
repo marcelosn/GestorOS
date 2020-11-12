@@ -39,6 +39,14 @@
             this.txtValorTotal = new System.Windows.Forms.TextBox();
             this.lwItensOrdemServico = new System.Windows.Forms.ListView();
             this.columnHeaderItem = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderTipo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderCod = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderServProd = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderQtde = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderVlrUnitario = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderSubTotal = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderDesconto = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderValorTotal = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label16 = new System.Windows.Forms.Label();
             this.txtObservacoesGerais = new System.Windows.Forms.TextBox();
@@ -76,14 +84,7 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnAdicionarProdSerc = new System.Windows.Forms.Button();
-            this.columnHeaderTipo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeaderCod = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeaderServProd = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeaderQtde = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeaderVlrUnitario = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeaderSubTotal = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeaderDesconto = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeaderValorTotal = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnFinalizar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -223,6 +224,51 @@
             // 
             this.columnHeaderItem.Text = "Item";
             this.columnHeaderItem.Width = 55;
+            // 
+            // columnHeaderTipo
+            // 
+            this.columnHeaderTipo.Text = "Tipo";
+            this.columnHeaderTipo.Width = 97;
+            // 
+            // columnHeaderCod
+            // 
+            this.columnHeaderCod.Text = "Cód.";
+            this.columnHeaderCod.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeaderCod.Width = 48;
+            // 
+            // columnHeaderServProd
+            // 
+            this.columnHeaderServProd.Text = "Produto/Serviço";
+            this.columnHeaderServProd.Width = 410;
+            // 
+            // columnHeaderQtde
+            // 
+            this.columnHeaderQtde.Text = "Qtde";
+            this.columnHeaderQtde.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // columnHeaderVlrUnitario
+            // 
+            this.columnHeaderVlrUnitario.Text = "Valor Unit.";
+            this.columnHeaderVlrUnitario.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.columnHeaderVlrUnitario.Width = 101;
+            // 
+            // columnHeaderSubTotal
+            // 
+            this.columnHeaderSubTotal.Text = "SubTotal";
+            this.columnHeaderSubTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.columnHeaderSubTotal.Width = 96;
+            // 
+            // columnHeaderDesconto
+            // 
+            this.columnHeaderDesconto.Text = "Desconto";
+            this.columnHeaderDesconto.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.columnHeaderDesconto.Width = 101;
+            // 
+            // columnHeaderValorTotal
+            // 
+            this.columnHeaderValorTotal.Text = "Valor Total";
+            this.columnHeaderValorTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.columnHeaderValorTotal.Width = 97;
             // 
             // groupBox3
             // 
@@ -632,12 +678,12 @@
             this.btnSalvar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnSalvar.Enabled = false;
             this.btnSalvar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalvar.Location = new System.Drawing.Point(760, 626);
+            this.btnSalvar.Location = new System.Drawing.Point(688, 625);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(209, 41);
+            this.btnSalvar.Size = new System.Drawing.Size(130, 41);
             this.btnSalvar.TabIndex = 3;
             this.btnSalvar.TabStop = false;
-            this.btnSalvar.Text = "Salvar  e Finalizar - F4";
+            this.btnSalvar.Text = "Salvar - F4";
             this.btnSalvar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
@@ -656,50 +702,19 @@
             this.btnAdicionarProdSerc.UseVisualStyleBackColor = true;
             this.btnAdicionarProdSerc.Click += new System.EventHandler(this.btnAdicionarProdSerc_Click);
             // 
-            // columnHeaderTipo
+            // btnFinalizar
             // 
-            this.columnHeaderTipo.Text = "Tipo";
-            this.columnHeaderTipo.Width = 97;
-            // 
-            // columnHeaderCod
-            // 
-            this.columnHeaderCod.Text = "Cód.";
-            this.columnHeaderCod.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeaderCod.Width = 48;
-            // 
-            // columnHeaderServProd
-            // 
-            this.columnHeaderServProd.Text = "Produto/Serviço";
-            this.columnHeaderServProd.Width = 410;
-            // 
-            // columnHeaderQtde
-            // 
-            this.columnHeaderQtde.Text = "Qtde";
-            this.columnHeaderQtde.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // columnHeaderVlrUnitario
-            // 
-            this.columnHeaderVlrUnitario.Text = "Valor Unit.";
-            this.columnHeaderVlrUnitario.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.columnHeaderVlrUnitario.Width = 101;
-            // 
-            // columnHeaderSubTotal
-            // 
-            this.columnHeaderSubTotal.Text = "SubTotal";
-            this.columnHeaderSubTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.columnHeaderSubTotal.Width = 96;
-            // 
-            // columnHeaderDesconto
-            // 
-            this.columnHeaderDesconto.Text = "Desconto";
-            this.columnHeaderDesconto.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.columnHeaderDesconto.Width = 101;
-            // 
-            // columnHeaderValorTotal
-            // 
-            this.columnHeaderValorTotal.Text = "Valor Total";
-            this.columnHeaderValorTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.columnHeaderValorTotal.Width = 97;
+            this.btnFinalizar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnFinalizar.BackgroundImage")));
+            this.btnFinalizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnFinalizar.Enabled = false;
+            this.btnFinalizar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFinalizar.Location = new System.Drawing.Point(824, 626);
+            this.btnFinalizar.Name = "btnFinalizar";
+            this.btnFinalizar.Size = new System.Drawing.Size(145, 41);
+            this.btnFinalizar.TabIndex = 4;
+            this.btnFinalizar.Text = "Finalizar - F4";
+            this.btnFinalizar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnFinalizar.UseVisualStyleBackColor = true;
             // 
             // FrmOrdemServico
             // 
@@ -707,6 +722,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1168, 676);
+            this.Controls.Add(this.btnFinalizar);
             this.Controls.Add(this.btnAdicionarProdSerc);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.btnCancelar);
@@ -789,5 +805,6 @@
         private System.Windows.Forms.ColumnHeader columnHeaderSubTotal;
         private System.Windows.Forms.ColumnHeader columnHeaderDesconto;
         private System.Windows.Forms.ColumnHeader columnHeaderValorTotal;
+        private System.Windows.Forms.Button btnFinalizar;
     }
 }

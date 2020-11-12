@@ -62,6 +62,12 @@
     <Compile Include="FrmAdicionarItensOS.Designer.cs">
       <DependentUpon>FrmAdicionarItensOS.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmBaseImprimirOrdemServico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBaseImprimirOrdemServico.Designer.cs">
+      <DependentUpon>FrmBaseImprimirOrdemServico.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmBuscarProdutoServico.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +135,9 @@
     <Compile Include="Utilitarios.cs" />
     <EmbeddedResource Include="FrmAdicionarItensOS.resx">
       <DependentUpon>FrmAdicionarItensOS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBaseImprimirOrdemServico.resx">
+      <DependentUpon>FrmBaseImprimirOrdemServico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmBuscarProdutoServico.resx">
       <DependentUpon>FrmBuscarProdutoServico.cs</DependentUpon>
