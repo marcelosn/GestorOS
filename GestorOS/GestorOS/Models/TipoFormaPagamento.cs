@@ -2,9 +2,8 @@
 
 namespace GestorOS.Models
 {
-    public class FormaPagamento : EntityBase
+    public class TipoFormaPagamento : EntityBase
     {
         public string Nome { get; set; }
-        public IEnumerable<OrdemServico> OrdemServicos { get; set; }
     }
 }

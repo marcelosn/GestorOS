@@ -45,7 +45,6 @@ namespace GestorOS
                                           .Include("Cliente")
                                           .Include("SituacaoOrdemServico")
                                           .Include("Objeto")
-                                          .Include("FormaPagamento")
                                           .Where(o => o.DataHoraCadastro >= dtInicial
                                                    && o.DataHoraCadastro <= dtFinal
                                                    && o.Cliente.NomeFantasia.Contains(txtBuscar.Text)
@@ -64,7 +63,6 @@ namespace GestorOS
                     lwOrdemSevicos.Items[i].SubItems.Add(ordemServicos[i].Cliente.NomeFantasia);
                     lwOrdemSevicos.Items[i].SubItems.Add(ordemServicos[i].Cliente.Documento);
                     lwOrdemSevicos.Items[i].SubItems.Add(ordemServicos[i].Objeto.Nome);
-                    lwOrdemSevicos.Items[i].SubItems.Add(ordemServicos[i].FormaPagamentoId == null ? "NÃO INFORMADO" : ordemServicos[i].FormaPagamento.Nome);
                     lwOrdemSevicos.Items[i].SubItems.Add(ordemServicos[i].ValorTotalServico.ToString("C"));
                     lwOrdemSevicos.Items[i].SubItems.Add(ordemServicos[i].ValorTotalProduto.ToString("C"));
                     lwOrdemSevicos.Items[i].SubItems.Add(ordemServicos[i].ValorDesconto.ToString("C"));

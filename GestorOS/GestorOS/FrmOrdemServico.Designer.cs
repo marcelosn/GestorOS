@@ -715,6 +715,7 @@
             this.btnFinalizar.Text = "Finalizar - F4";
             this.btnFinalizar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnFinalizar.UseVisualStyleBackColor = true;
+            this.btnFinalizar.Click += new System.EventHandler(this.btnFinalizar_Click);
             // 
             // FrmOrdemServico
             // 

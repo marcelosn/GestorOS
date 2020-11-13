@@ -29,7 +29,9 @@ namespace GestorOS.Data
 
         public DbSet<OrdemServicoItem> OrdemServicoItems { get; set; }
 
-        public DbSet<FormaPagamento> FormaPagamentos { get; set; }
+        public DbSet<TipoFormaPagamento> TipoFormaPagamentos { get; set; }
+
+        public DbSet<FormaPagamentoOrdemServico> FormaPagamentoOrdemServicos { get; set; }
 
         public DbSet<SituacaoOrdemServico> SituacaoOrdemServicos { get; set; }
 

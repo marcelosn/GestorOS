@@ -56,7 +56,6 @@
             this.columnHeaderCliente = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderDoc = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderEquip = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeaderFormaPagto = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderVlServico = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderVlProd = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderValorDesc = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -321,7 +320,6 @@
             this.columnHeaderCliente,
             this.columnHeaderDoc,
             this.columnHeaderEquip,
-            this.columnHeaderFormaPagto,
             this.columnHeaderVlServico,
             this.columnHeaderVlProd,
             this.columnHeaderValorDesc,
@@ -368,12 +366,6 @@
             // 
             this.columnHeaderEquip.Text = "Objeto";
             this.columnHeaderEquip.Width = 183;
-            // 
-            // columnHeaderFormaPagto
-            // 
-            this.columnHeaderFormaPagto.Text = "Forma Pagamento";
-            this.columnHeaderFormaPagto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeaderFormaPagto.Width = 156;
             // 
             // columnHeaderVlServico
             // 
@@ -465,7 +457,6 @@
         private System.Windows.Forms.ColumnHeader columnHeaderCliente;
         private System.Windows.Forms.ColumnHeader columnHeaderDoc;
         private System.Windows.Forms.ColumnHeader columnHeaderEquip;
-        private System.Windows.Forms.ColumnHeader columnHeaderFormaPagto;
         private System.Windows.Forms.ColumnHeader columnHeaderVlServico;
         private System.Windows.Forms.ColumnHeader columnHeaderVlProd;
         private System.Windows.Forms.ColumnHeader columnHeaderValorDesc;

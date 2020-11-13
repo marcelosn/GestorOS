@@ -317,7 +317,6 @@ namespace GestorOS
         {
             var ordemServico = new OrdemServico()
             {
-                FormaPagamentoId = null,
                 ClienteId = Convert.ToInt32(txtCodigoCliente.Text),
                 DataPrevisaoEntrega = Convert.ToDateTime(txtDataPrevisaoEntrega.Text),
                 DescricaoProblema = txtDescricaoDefeito.Text,
@@ -380,6 +379,14 @@ namespace GestorOS
             }
 
             return true;
+        }
+
+        private void btnFinalizar_Click(object sender, EventArgs e)
+        {
+            FrmFinalizarOrdemServicoVenda frm = new FrmFinalizarOrdemServicoVenda();
+            frm.tipoFinalizacao = "Ordem de Serviço";
+            frm.txtValorPrincipal.Text = Convert.ToDecimal(valorTotal).ToString("N2");
+            frm.ShowDialog();
         }
     }
 }

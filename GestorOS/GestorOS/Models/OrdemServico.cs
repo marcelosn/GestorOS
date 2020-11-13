@@ -11,8 +11,6 @@ namespace GestorOS.Models
 
         public int SituacaoOrdemServicoId { get; set; }
 
-        public int? FormaPagamentoId { get; set; }
-
         public int ClienteId { get; set; }
 
         public int ObjetoId { get; set; }
@@ -33,9 +31,9 @@ namespace GestorOS.Models
 
         public Operador Operador { get; set; }
         public SituacaoOrdemServico SituacaoOrdemServico { get; set; }
-        public FormaPagamento FormaPagamento { get; set; }
         public Cliente Cliente { get; set; }
         public Objeto Objeto { get; set; }
         public IEnumerable<OrdemServicoItem> OrdemServicoItems { get; set; }
+        public IEnumerable<FormaPagamentoOrdemServico> FormasPagamentoOrdemServicos { get; set; }
     }
 }
