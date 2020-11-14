@@ -3,12 +3,8 @@ using GestorOS.Data;
 using GestorOS.Models;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GestorOS
@@ -139,6 +135,17 @@ namespace GestorOS
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
                         CarregaTodasOrdemServicos();
+        }
+
+        private void editarOrdemDeServiçoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (lwOrdemSevicos.Items.Count > 0)
+            {
+                int ordemServicoId = int.Parse(lwOrdemSevicos.FocusedItem.SubItems[0].Text);
+                FrmOrdemServico frm = new FrmOrdemServico();
+                frm.CarregaOrdemServicoEditar(ordemServicoId);
+                frm.ShowDialog();
+            }
         }
     }
 }

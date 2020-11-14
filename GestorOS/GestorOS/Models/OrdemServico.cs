@@ -9,7 +9,7 @@ namespace GestorOS.Models
 
         public DateTime DataPrevisaoEntrega { get; set; }
 
-        public int SituacaoOrdemServicoId { get; set; }
+        public int? SituacaoOrdemServicoId { get; set; }
 
         public int ClienteId { get; set; }
 

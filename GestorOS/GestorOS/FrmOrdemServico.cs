@@ -13,6 +13,9 @@ namespace GestorOS
     {
         MeuDataContext meuDataContext;
         IList<OrdemServicoItem> listaItemOrdemServico = new List<OrdemServicoItem>();
+        IList<FormaPagamentoOrdemServico> listaFormaPgtoOS = new List<FormaPagamentoOrdemServico>();
+
+        int? ordemServico = null;
         int item = 1;
         int codigoOperador = 1;
         int qtde;
@@ -32,9 +35,32 @@ namespace GestorOS
 
         private void FrmOrdemServico_Load(object sender, EventArgs e)
         {
-            IniciarNovaOrdemServico();
-            txtCodigoOperador.Text = codigoOperador.ToString();
-            txtNomeOperador.Text = nomeOperador;
+            if (ordemServico == null)
+            {
+                IniciarNovaOrdemServico();
+                txtCodigoOperador.Text = codigoOperador.ToString();
+                txtNomeOperador.Text = nomeOperador;
+            }
+        }
+
+        public void CarregaOrdemServicoEditar(int ordemServicoId)
+        {
+            this.ordemServico = ordemServicoId;
+
+            var ordemServico = meuDataContext.OrdemServicos
+                                              .AsNoTracking()
+                                              .Include("Cliente")
+                                              .Include("SituacaoOrdemServico")
+                                              .Include("Objeto")
+                                              .FirstOrDefault(os => os.Id == ordemServicoId);
+            if(ordemServico != null)
+            {
+                txtNumeroOS.Text = Utilitarios.AdicionaZero(ordemServico.Id.ToString());
+                txtDataAbertura.Text = ordemServico.DataHoraCadastro.ToString("dd/MM/yyyy");
+                txtCodigoCliente.Text = ordemServico.ClienteId.ToString();
+                txtNomeCliente.Text = ordemServico.Cliente.NomeFantasia;
+                txtSituacao.Text = ordemServico.SituacaoOrdemServico.Nome;
+            }
         }
 
         private void IniciarNovaOrdemServico()
@@ -81,6 +107,10 @@ namespace GestorOS
             }
             if (e.KeyCode == Keys.F4)
             {
+            }
+            if (e.KeyCode == Keys.F5)
+            {
+                btnFinalizar_Click(this, e);
             }
         }
 
@@ -298,7 +328,7 @@ namespace GestorOS
             {
                 if (ValidarCamposObrigatorios())
                 {
-                    SalvarOrdemServico();
+                    SalvarOrdemServico(Convert.ToInt32(txtSituacao.SelectedValue));
 
                     if (MessageBox.Show("Ordem de serviço salva com sucesso. \n\nDeseja iniciar uma nova ordem de serviço ?", "Mensgem sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
@@ -313,7 +343,7 @@ namespace GestorOS
             }
         }
 
-        private void SalvarOrdemServico()
+        private void SalvarOrdemServico(int? situacao)
         {
             var ordemServico = new OrdemServico()
             {
@@ -323,7 +353,7 @@ namespace GestorOS
                 Observacoes = txtObservacoesGerais.Text,
                 OperadorId = Convert.ToInt32(txtCodigoOperador.Text),
                 ObjetoId = Convert.ToInt32(txtCodigoObjeto.Text),
-                SituacaoOrdemServicoId = Convert.ToInt32(txtSituacao.SelectedValue),
+                SituacaoOrdemServicoId = situacao,
                 ValorTotalServico = valorTotalServico,
                 ValorTotalProduto = valorTotalProduto,
                 ValorAcrescimo = Convert.ToDecimal(null),
@@ -336,6 +366,8 @@ namespace GestorOS
             meuDataContext.SaveChanges();
 
             SalvarOrdemServicoItem(ordemServico.Id);
+
+            SalvarItensFormaPagamentoOrdemServico(ordemServico.Id);
         }
 
         private void SalvarOrdemServicoItem(int ordemServicoId)
@@ -363,6 +395,23 @@ namespace GestorOS
             }
         }
 
+        private void SalvarItensFormaPagamentoOrdemServico(int ordemServicoId)
+        {
+            foreach (var item in listaFormaPgtoOS)
+            {
+                var formaPagamentoOrdemServico = new FormaPagamentoOrdemServico()
+                {
+                    OrdemServicoId = ordemServicoId,
+                    TipoFormaPagamentoId = item.TipoFormaPagamentoId,
+                    DataHoraCadastro = item.DataHoraCadastro,
+                    Valor = item.Valor
+                };
+
+                meuDataContext.FormaPagamentoOrdemServicos.Add(formaPagamentoOrdemServico);
+                meuDataContext.SaveChanges();
+            }
+        }
+
         public bool ValidarCamposObrigatorios()
         {
             if (string.IsNullOrEmpty(txtCodigoCliente.Text))
@@ -383,10 +432,33 @@ namespace GestorOS
 
         private void btnFinalizar_Click(object sender, EventArgs e)
         {
-            FrmFinalizarOrdemServicoVenda frm = new FrmFinalizarOrdemServicoVenda();
-            frm.tipoFinalizacao = "Ordem de Serviço";
-            frm.txtValorPrincipal.Text = Convert.ToDecimal(valorTotal).ToString("N2");
-            frm.ShowDialog();
+            if (btnFinalizar.Enabled)
+            {
+                if (ValidarCamposObrigatorios())
+                {
+                    FrmFinalizarOrdemServicoVenda frm = new FrmFinalizarOrdemServicoVenda();
+                    frm.tipoFinalizacao = "Ordem de Serviço";
+                    frm.txtValorPrincipal.Text = Convert.ToDecimal(valorTotal).ToString("N2");
+                    frm.ShowDialog();
+
+                    if (frm.isFinalizar)
+                    {
+                        listaFormaPgtoOS = frm.listaFormaPgtoOS;
+
+                        SalvarOrdemServico(meuDataContext.SituacaoOrdemServicos.Where(s => s.Nome.Contains("FINALIZADA")).Select(s => s.Id).FirstOrDefault());
+
+                        if (MessageBox.Show("Ordem de serviço finalizada com sucesso. \n\nDeseja iniciar uma nova ordem de serviço ?", "Mensgem sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        {
+                            LimparTodosCamposFormulario();
+                            IniciarNovaOrdemServico();
+                        }
+                        else
+                        {
+                            this.Close();
+                        }
+                    }
+                }
+            }
         }
     }
 }

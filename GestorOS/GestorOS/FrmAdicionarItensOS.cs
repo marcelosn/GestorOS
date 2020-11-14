@@ -147,7 +147,7 @@ namespace GestorOS
 
         private void FrmAdicionarItensOS_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.F3)
+            if (e.KeyCode == Keys.F4)
             {
                 btnSalvar_Click(this, e);
             }

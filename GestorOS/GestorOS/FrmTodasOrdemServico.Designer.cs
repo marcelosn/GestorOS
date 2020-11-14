@@ -62,6 +62,7 @@
             this.columnHeaderVLT = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.imprimirOrdemDeServiçoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editarOrdemDeServiçoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
@@ -312,6 +313,7 @@
             this.lwOrdemSevicos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.lwOrdemSevicos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.lwOrdemSevicos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lwOrdemSevicos.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeadeNO,
@@ -393,9 +395,10 @@
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.imprimirOrdemDeServiçoToolStripMenuItem});
+            this.imprimirOrdemDeServiçoToolStripMenuItem,
+            this.editarOrdemDeServiçoToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(253, 28);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(253, 74);
             // 
             // imprimirOrdemDeServiçoToolStripMenuItem
             // 
@@ -405,6 +408,15 @@
             this.imprimirOrdemDeServiçoToolStripMenuItem.Size = new System.Drawing.Size(252, 24);
             this.imprimirOrdemDeServiçoToolStripMenuItem.Text = "Imprimir ordem de serviço";
             this.imprimirOrdemDeServiçoToolStripMenuItem.Click += new System.EventHandler(this.imprimirOrdemDeServiçoToolStripMenuItem_Click);
+            // 
+            // editarOrdemDeServiçoToolStripMenuItem
+            // 
+            this.editarOrdemDeServiçoToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editarOrdemDeServiçoToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("editarOrdemDeServiçoToolStripMenuItem.Image")));
+            this.editarOrdemDeServiçoToolStripMenuItem.Name = "editarOrdemDeServiçoToolStripMenuItem";
+            this.editarOrdemDeServiçoToolStripMenuItem.Size = new System.Drawing.Size(252, 24);
+            this.editarOrdemDeServiçoToolStripMenuItem.Text = "Editar ordem de serviço";
+            this.editarOrdemDeServiçoToolStripMenuItem.Click += new System.EventHandler(this.editarOrdemDeServiçoToolStripMenuItem_Click);
             // 
             // FrmTodasOrdemServico
             // 
@@ -463,5 +475,6 @@
         private System.Windows.Forms.ColumnHeader columnHeaderVLT;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem imprimirOrdemDeServiçoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem editarOrdemDeServiçoToolStripMenuItem;
     }
 }
