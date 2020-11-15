@@ -28,20 +28,58 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.OrdemServicoItemBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.DataSetGestorOS = new GestorOS.DataSetGestorOS();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            ((System.ComponentModel.ISupportInitialize)(this.OrdemServicoItemBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataSetGestorOS)).BeginInit();
             this.SuspendLayout();
+            // 
+            // OrdemServicoItemBindingSource
+            // 
+            this.OrdemServicoItemBindingSource.DataMember = "OrdemServicoItem";
+            this.OrdemServicoItemBindingSource.DataSource = this.DataSetGestorOS;
+            // 
+            // DataSetGestorOS
+            // 
+            this.DataSetGestorOS.DataSetName = "DataSetGestorOS";
+            this.DataSetGestorOS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // reportViewer1
+            // 
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource1.Name = "DataSetOrdemServicoItem";
+            reportDataSource1.Value = this.OrdemServicoItemBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "GestorOS.ReportComprovanteOS.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(800, 450);
+            this.reportViewer1.TabIndex = 0;
             // 
             // FrmBaseImprimirOrdemServico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.reportViewer1);
             this.Name = "FrmBaseImprimirOrdemServico";
-            this.Text = "Visualizar impressão ordem de serviço";
+            this.Text = "Pré visualização de impressão ordem de serviço";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FrmBaseImprimirOrdemServico_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.OrdemServicoItemBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataSetGestorOS)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private System.Windows.Forms.BindingSource OrdemServicoItemBindingSource;
+        private DataSetGestorOS DataSetGestorOS;
     }
 }

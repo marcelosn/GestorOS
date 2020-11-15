@@ -101,8 +101,15 @@ namespace GestorOS
 
         private void imprimirOrdemDeServiçoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmBaseImprimirOrdemServico frm = new FrmBaseImprimirOrdemServico();
-            frm.ShowDialog();
+            if (lwOrdemSevicos.Items.Count > 0)
+            {
+                int ordemServicoId = int.Parse(lwOrdemSevicos.FocusedItem.SubItems[0].Text);
+
+                FrmBaseImprimirOrdemServico frm = new FrmBaseImprimirOrdemServico();
+                frm.CarregaReportComprovanteOrdemServico(ordemServicoId);
+
+                frm.ShowDialog();
+            }
         }
 
         private void txtDataFinal_ValueChanged_1(object sender, EventArgs e)
