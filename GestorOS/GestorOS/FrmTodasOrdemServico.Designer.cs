@@ -313,7 +313,7 @@
             this.lwOrdemSevicos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lwOrdemSevicos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lwOrdemSevicos.BackColor = System.Drawing.Color.SeaShell;
             this.lwOrdemSevicos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lwOrdemSevicos.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeadeNO,

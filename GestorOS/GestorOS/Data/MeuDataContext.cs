@@ -37,6 +37,8 @@ namespace GestorOS.Data
 
         public DbSet<Operador> Operadores { get; set; }
 
+        public DbSet<Empresa> Empresas { get; set; }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
