@@ -23,7 +23,13 @@ namespace GestorOS
 
         public void CarregaReportComprovanteOrdemServico(int ordemServicoId)
         {
-            var ordemServico = meuDataContext.OrdemServicos.Find(ordemServicoId);
+            var ordemServico = meuDataContext.OrdemServicos
+                                             .AsNoTracking()
+                                             .Include("Cliente")
+                                             .Include("Objeto")
+                                             .Where(os=> os.Id == ordemServicoId).FirstOrDefault();
+
+            var endereco = meuDataContext.Enderecos.AsNoTracking().Where(e => e.ClienteId == ordemServico.ClienteId).FirstOrDefault();
 
             var ordemServicoItens = meuDataContext.OrdemServicoItems
                                                   .Include("Produto")
@@ -52,7 +58,7 @@ namespace GestorOS
                 itemCount++;
             }
 
-            //Cabeçalho da ordem de serviço
+            //Cabeçalho - empresa
             this.reportViewer1.LocalReport.SetParameters(new ReportParameter("NumeroOS", Utilitarios.AdicionaZero(ordemServico.Id.ToString())));
             this.reportViewer1.LocalReport.SetParameters(new ReportParameter("Documento", empresa.Documento));
             this.reportViewer1.LocalReport.SetParameters(new ReportParameter("RazaoSocial", empresa.RazaoSocial));
@@ -64,8 +70,44 @@ namespace GestorOS
             this.reportViewer1.LocalReport.SetParameters(new ReportParameter("Cidade", empresa.Cidade));
             this.reportViewer1.LocalReport.SetParameters(new ReportParameter("UF", empresa.UF));
 
+            //Informaçoes - objeto
+            this.reportViewer1.LocalReport.SetParameters(new ReportParameter("Objeto", ordemServico.Objeto.Nome));
+            this.reportViewer1.LocalReport.SetParameters(new ReportParameter("DescricaoProblema", ordemServico.DescricaoProblema));
+            this.reportViewer1.LocalReport.SetParameters(new ReportParameter("Observacoes", ordemServico.Observacoes));
+
+            //Informaçoes - cliente
+            this.reportViewer1.LocalReport.SetParameters(new ReportParameter("Cliente", ordemServico.Cliente.NomeFantasia));
+            this.reportViewer1.LocalReport.SetParameters(new ReportParameter("DocumentoCliente", ordemServico.Cliente.Documento));
+            this.reportViewer1.LocalReport.SetParameters(new ReportParameter("Email", ordemServico.Cliente.Email)) ;
+            this.reportViewer1.LocalReport.SetParameters(new ReportParameter("Celular", ordemServico.Cliente.Celular));
+            this.reportViewer1.LocalReport.SetParameters(new ReportParameter("CepCliente", endereco.Cep));
+            this.reportViewer1.LocalReport.SetParameters(new ReportParameter("LogradouroCliente", endereco.Logradouro));
+            this.reportViewer1.LocalReport.SetParameters(new ReportParameter("NumeroCliente", endereco.Numero));
+            this.reportViewer1.LocalReport.SetParameters(new ReportParameter("BairroCliente",endereco.Bairro));
+            this.reportViewer1.LocalReport.SetParameters(new ReportParameter("ComplementoCliente", endereco.Complemento));
+            this.reportViewer1.LocalReport.SetParameters(new ReportParameter("CidadeCliente", endereco.Cidade));
+            this.reportViewer1.LocalReport.SetParameters(new ReportParameter("UFCliente", endereco.UF));
+
+            //Informaçoes - valores
+            this.reportViewer1.LocalReport.SetParameters(new ReportParameter("ValorTotalProduto", ordemServico.ValorTotalProduto.ToString("N2")));
+            this.reportViewer1.LocalReport.SetParameters(new ReportParameter("ValorTotalServico", ordemServico.ValorTotalServico.ToString("N2")));
+            this.reportViewer1.LocalReport.SetParameters(new ReportParameter("ValorTotal", ordemServico.ValorTotal.ToString("N2")));
+            this.reportViewer1.LocalReport.SetParameters(new ReportParameter("ValorAcrescimo", ordemServico.ValorAcrescimo.ToString("N2")));
+            this.reportViewer1.LocalReport.SetParameters(new ReportParameter("ValorDesconto", ordemServico.ValorDesconto.ToString("N2")));
+
+            //Renderiza o report
             this.reportViewer1.SetDisplayMode(DisplayMode.PrintLayout);
             this.reportViewer1.RefreshReport();
         }
     }
 }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
