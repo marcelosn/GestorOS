@@ -52,6 +52,7 @@ namespace GestorOS
                                               .Include("Cliente")
                                               .Include("SituacaoOrdemServico")
                                               .Include("Objeto")
+                                              .Include("Operador")
                                               .FirstOrDefault(os => os.Id == ordemServicoId);
             if(ordemServico != null)
             {
@@ -59,7 +60,22 @@ namespace GestorOS
                 txtDataAbertura.Text = ordemServico.DataHoraCadastro.ToString("dd/MM/yyyy");
                 txtCodigoCliente.Text = ordemServico.ClienteId.ToString();
                 txtNomeCliente.Text = ordemServico.Cliente.NomeFantasia;
+                txtCodigoOperador.Text = ordemServico.OperadorId.ToString();
+                txtNomeOperador.Text = ordemServico.Operador.Nome;
+                txtCodigoObjeto.Text = ordemServico.ObjetoId.ToString();
+                txtNomeObjeto.Text = ordemServico.Objeto.Nome;
                 txtSituacao.Text = ordemServico.SituacaoOrdemServico.Nome;
+                txtDescricaoDefeito.Text = ordemServico.DescricaoProblema;
+                txtObservacoesGerais.Text = ordemServico.Observacoes;
+                txtDocumento.Text = ordemServico.Cliente.Documento;
+                txtCelular.Text = ordemServico.Cliente.Celular;
+                txtDataPrevisaoEntrega.Text = ordemServico.DataPrevisaoEntrega.ToString("dd/MM/yyyy");
+
+                listaItemOrdemServico = meuDataContext.OrdemServicoItems
+                                                      .AsNoTracking()
+                                                      .Include("Produto")
+                                                      .Where(i => i.OrdemServicoId == ordemServicoId).ToList();
+                AdicionarItens();
             }
         }
 

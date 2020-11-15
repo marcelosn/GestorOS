@@ -43,9 +43,7 @@ namespace GestorOS
                                           .Include("Objeto")
                                           .Where(o => o.DataHoraCadastro >= dtInicial
                                                    && o.DataHoraCadastro <= dtFinal
-                                                   && o.Cliente.NomeFantasia.Contains(txtBuscar.Text)
-                                                   && o.Cliente.RazaoSocial.Contains(txtBuscar.Text)
-                                                   && o.Cliente.Documento.Contains(txtBuscar.Text))
+                                                   && o.Cliente.NomeFantasia.Contains(txtBuscar.Text))
                                            .OrderBy(o => o.DataHoraCadastro).ToList();
             if (ordemServicos.Count > 0)
             {

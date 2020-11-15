@@ -39,7 +39,6 @@
             this.txtValorTotal = new System.Windows.Forms.TextBox();
             this.lwItensOrdemServico = new System.Windows.Forms.ListView();
             this.columnHeaderItem = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeaderTipo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderCod = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderServProd = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderQtde = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -85,6 +84,7 @@
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnAdicionarProdSerc = new System.Windows.Forms.Button();
             this.btnFinalizar = new System.Windows.Forms.Button();
+            this.columnHeaderTipo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -137,7 +137,7 @@
             // txtTotallQtdeItem
             // 
             this.txtTotallQtdeItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotallQtdeItem.Location = new System.Drawing.Point(624, 157);
+            this.txtTotallQtdeItem.Location = new System.Drawing.Point(620, 157);
             this.txtTotallQtdeItem.Name = "txtTotallQtdeItem";
             this.txtTotallQtdeItem.ReadOnly = true;
             this.txtTotallQtdeItem.Size = new System.Drawing.Size(55, 29);
@@ -149,7 +149,7 @@
             // txtTotalValorUnitario
             // 
             this.txtTotalValorUnitario.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotalValorUnitario.Location = new System.Drawing.Point(684, 157);
+            this.txtTotalValorUnitario.Location = new System.Drawing.Point(680, 157);
             this.txtTotalValorUnitario.Name = "txtTotalValorUnitario";
             this.txtTotalValorUnitario.ReadOnly = true;
             this.txtTotalValorUnitario.Size = new System.Drawing.Size(93, 29);
@@ -161,7 +161,7 @@
             // txtTotalSubTotal
             // 
             this.txtTotalSubTotal.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotalSubTotal.Location = new System.Drawing.Point(782, 157);
+            this.txtTotalSubTotal.Location = new System.Drawing.Point(778, 157);
             this.txtTotalSubTotal.Name = "txtTotalSubTotal";
             this.txtTotalSubTotal.ReadOnly = true;
             this.txtTotalSubTotal.Size = new System.Drawing.Size(95, 29);
@@ -173,7 +173,7 @@
             // txtTotalDesconto
             // 
             this.txtTotalDesconto.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotalDesconto.Location = new System.Drawing.Point(882, 157);
+            this.txtTotalDesconto.Location = new System.Drawing.Point(878, 157);
             this.txtTotalDesconto.Name = "txtTotalDesconto";
             this.txtTotalDesconto.ReadOnly = true;
             this.txtTotalDesconto.Size = new System.Drawing.Size(100, 29);
@@ -185,7 +185,7 @@
             // txtValorTotal
             // 
             this.txtValorTotal.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtValorTotal.Location = new System.Drawing.Point(987, 157);
+            this.txtValorTotal.Location = new System.Drawing.Point(983, 157);
             this.txtValorTotal.Name = "txtValorTotal";
             this.txtValorTotal.ReadOnly = true;
             this.txtValorTotal.Size = new System.Drawing.Size(94, 29);
@@ -225,11 +225,6 @@
             // 
             this.columnHeaderItem.Text = "Item";
             this.columnHeaderItem.Width = 55;
-            // 
-            // columnHeaderTipo
-            // 
-            this.columnHeaderTipo.Text = "Tipo";
-            this.columnHeaderTipo.Width = 97;
             // 
             // columnHeaderCod
             // 
@@ -718,6 +713,11 @@
             this.btnFinalizar.UseVisualStyleBackColor = true;
             this.btnFinalizar.Click += new System.EventHandler(this.btnFinalizar_Click);
             // 
+            // columnHeaderTipo
+            // 
+            this.columnHeaderTipo.Text = "Tipo";
+            this.columnHeaderTipo.Width = 105;
+            // 
             // FrmOrdemServico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -799,7 +799,6 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnAdicionarProdSerc;
-        private System.Windows.Forms.ColumnHeader columnHeaderTipo;
         private System.Windows.Forms.ColumnHeader columnHeaderCod;
         private System.Windows.Forms.ColumnHeader columnHeaderServProd;
         private System.Windows.Forms.ColumnHeader columnHeaderQtde;
@@ -808,5 +807,6 @@
         private System.Windows.Forms.ColumnHeader columnHeaderDesconto;
         private System.Windows.Forms.ColumnHeader columnHeaderValorTotal;
         private System.Windows.Forms.Button btnFinalizar;
+        private System.Windows.Forms.ColumnHeader columnHeaderTipo;
     }
 }

@@ -52,6 +52,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataSetGestorOS.cs">
+      <DependentUpon>DataSetGestorOS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetGestorOS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetGestorOS.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Data\MeuDataContext.cs" />
     <Compile Include="Enum\TipoDocumento.cs" />
     <Compile Include="Enum\TipoLancamento.cs" />
@@ -179,6 +187,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="DataSetGestorOS.xsc">
+      <DependentUpon>DataSetGestorOS.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetGestorOS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetGestorOS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetGestorOS.xss">
+      <DependentUpon>DataSetGestorOS.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -193,6 +212,5 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -345,7 +345,7 @@
             // columnHeaderSituacao
             // 
             this.columnHeaderSituacao.Text = "Situação";
-            this.columnHeaderSituacao.Width = 127;
+            this.columnHeaderSituacao.Width = 160;
             // 
             // columnHeaderDataAbertura
             // 
@@ -398,7 +398,7 @@
             this.imprimirOrdemDeServiçoToolStripMenuItem,
             this.editarOrdemDeServiçoToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(253, 74);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(253, 52);
             // 
             // imprimirOrdemDeServiçoToolStripMenuItem
             // 
