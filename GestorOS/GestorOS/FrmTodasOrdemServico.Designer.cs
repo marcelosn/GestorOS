@@ -345,7 +345,7 @@
             // columnHeaderSituacao
             // 
             this.columnHeaderSituacao.Text = "Situação";
-            this.columnHeaderSituacao.Width = 160;
+            this.columnHeaderSituacao.Width = 200;
             // 
             // columnHeaderDataAbertura
             // 

@@ -776,7 +776,7 @@
                   <Paragraph>
                     <TextRuns>
                       <TextRun>
-                        <Value>Cliente:  </Value>
+                        <Value>Cliente: </Value>
                         <Style>
                           <FontWeight>Bold</FontWeight>
                         </Style>
@@ -790,7 +790,7 @@
                   </Paragraph>
                 </Paragraphs>
                 <rd:DefaultName>Cliente</rd:DefaultName>
-                <Top>0.74111cm</Top>
+                <Top>0.70936cm</Top>
                 <Left>0.35295cm</Left>
                 <Height>0.6cm</Height>
                 <Width>8.75594cm</Width>
@@ -826,10 +826,10 @@
                   </Paragraph>
                 </Paragraphs>
                 <rd:DefaultName>DocumentoCliente</rd:DefaultName>
-                <Top>0.74111cm</Top>
-                <Left>9.28529cm</Left>
+                <Top>0.70936cm</Top>
+                <Left>9.25354cm</Left>
                 <Height>0.6cm</Height>
-                <Width>5.24897cm</Width>
+                <Width>4.93147cm</Width>
                 <ZIndex>2</ZIndex>
                 <Style>
                   <Border>
@@ -862,10 +862,10 @@
                   </Paragraph>
                 </Paragraphs>
                 <rd:DefaultName>Celular</rd:DefaultName>
-                <Top>0.74111cm</Top>
-                <Left>14.50578cm</Left>
+                <Top>0.70936cm</Top>
+                <Left>14.18828cm</Left>
                 <Height>0.6cm</Height>
-                <Width>3.58479cm</Width>
+                <Width>3.90229cm</Width>
                 <ZIndex>3</ZIndex>
                 <Style>
                   <Border>
@@ -899,9 +899,9 @@
                 </Paragraphs>
                 <rd:DefaultName>Email</rd:DefaultName>
                 <Top>1.40322cm</Top>
-                <Left>0.36883cm</Left>
+                <Left>0.33708cm</Left>
                 <Height>0.6cm</Height>
-                <Width>8.74007cm</Width>
+                <Width>8.8071cm</Width>
                 <ZIndex>4</ZIndex>
                 <Style>
                   <Border>
@@ -920,7 +920,7 @@
                   <Paragraph>
                     <TextRuns>
                       <TextRun>
-                        <Value>CEP:</Value>
+                        <Value>CEP: </Value>
                         <Style>
                           <FontWeight>Bold</FontWeight>
                         </Style>
@@ -956,7 +956,7 @@
                   <Paragraph>
                     <TextRuns>
                       <TextRun>
-                        <Value>Rua:</Value>
+                        <Value>Rua: </Value>
                         <Style>
                           <FontWeight>Bold</FontWeight>
                         </Style>
@@ -970,10 +970,10 @@
                   </Paragraph>
                 </Paragraphs>
                 <rd:DefaultName>LogradouroCliente</rd:DefaultName>
-                <Top>1.40322cm</Top>
-                <Left>12.20359cm</Left>
+                <Top>2.06997cm</Top>
+                <Left>9.28259cm</Left>
                 <Height>0.6cm</Height>
-                <Width>5.85523cm</Width>
+                <Width>8.77623cm</Width>
                 <ZIndex>6</ZIndex>
                 <Style>
                   <Border>
@@ -992,7 +992,7 @@
                   <Paragraph>
                     <TextRuns>
                       <TextRun>
-                        <Value>Nº.</Value>
+                        <Value>Nº. </Value>
                         <Style>
                           <FontWeight>Bold</FontWeight>
                         </Style>
@@ -1009,7 +1009,7 @@
                 <Top>2.08436cm</Top>
                 <Left>0.35295cm</Left>
                 <Height>0.6cm</Height>
-                <Width>2.5cm</Width>
+                <Width>1.57396cm</Width>
                 <ZIndex>7</ZIndex>
                 <Style>
                   <Border>
@@ -1043,9 +1043,9 @@
                 </Paragraphs>
                 <rd:DefaultName>BairroCliente</rd:DefaultName>
                 <Top>2.0773cm</Top>
-                <Left>2.85295cm</Left>
+                <Left>2.02745cm</Left>
                 <Height>0.6cm</Height>
-                <Width>6.25594cm</Width>
+                <Width>7.08144cm</Width>
                 <ZIndex>8</ZIndex>
                 <Style>
                   <Border>
@@ -1064,7 +1064,7 @@
                   <Paragraph>
                     <TextRuns>
                       <TextRun>
-                        <Value>Cidade:</Value>
+                        <Value>Cidade: </Value>
                         <Style>
                           <FontWeight>Bold</FontWeight>
                         </Style>
@@ -1078,10 +1078,10 @@
                   </Paragraph>
                 </Paragraphs>
                 <rd:DefaultName>CidadeCliente</rd:DefaultName>
-                <Top>2.10905cm</Top>
-                <Left>9.22967cm</Left>
+                <Top>2.74405cm</Top>
+                <Left>9.29317cm</Left>
                 <Height>0.6cm</Height>
-                <Width>5.30459cm</Width>
+                <Width>4.89184cm</Width>
                 <ZIndex>9</ZIndex>
                 <Style>
                   <Border>
@@ -1100,7 +1100,7 @@
                   <Paragraph>
                     <TextRuns>
                       <TextRun>
-                        <Value>UF:</Value>
+                        <Value>UF: </Value>
                         <Style>
                           <FontWeight>Bold</FontWeight>
                         </Style>
@@ -1114,10 +1114,10 @@
                   </Paragraph>
                 </Paragraphs>
                 <rd:DefaultName>UFCliente</rd:DefaultName>
-                <Top>2.07377cm</Top>
-                <Left>14.60481cm</Left>
+                <Top>2.74052cm</Top>
+                <Left>14.22381cm</Left>
                 <Height>0.6cm</Height>
-                <Width>3.45401cm</Width>
+                <Width>3.83501cm</Width>
                 <ZIndex>10</ZIndex>
                 <Style>
                   <Border>
@@ -1154,10 +1154,10 @@
                   </Paragraph>
                 </Paragraphs>
                 <rd:DefaultName>ComplementoCliente</rd:DefaultName>
-                <Top>2.82668cm</Top>
+                <Top>2.79493cm</Top>
                 <Left>0.36883cm</Left>
                 <Height>0.6cm</Height>
-                <Width>17.68999cm</Width>
+                <Width>8.74006cm</Width>
                 <ZIndex>11</ZIndex>
                 <Style>
                   <Border>
@@ -1174,7 +1174,7 @@
             <Top>0.74817cm</Top>
             <Left>0.34237cm</Left>
             <Height>3.52193cm</Height>
-            <Width>18.4014cm</Width>
+            <Width>18.40807cm</Width>
             <ZIndex>2</ZIndex>
             <Style>
               <Border>
@@ -1191,7 +1191,7 @@
                   <Paragraph>
                     <TextRuns>
                       <TextRun>
-                        <Value> Informações sobre o objeto</Value>
+                        <Value> Informações sobre o objeto / ordem de serviço</Value>
                         <Style>
                           <FontWeight>Bold</FontWeight>
                         </Style>
@@ -1204,7 +1204,7 @@
                 </Paragraphs>
                 <rd:DefaultName>Textbox2</rd:DefaultName>
                 <Height>0.6cm</Height>
-                <Width>5.2386cm</Width>
+                <Width>8.83693cm</Width>
                 <Style>
                   <Border>
                     <Style>None</Style>
@@ -1229,14 +1229,10 @@
                   <Paragraph>
                     <TextRuns>
                       <TextRun>
-                        <Value>Defeito:</Value>
+                        <Value>Defeito: </Value>
                         <Style>
                           <FontWeight>Bold</FontWeight>
                         </Style>
-                      </TextRun>
-                      <TextRun>
-                        <Value xml:space="preserve">   </Value>
-                        <Style />
                       </TextRun>
                       <TextRun>
                         <Value>=Parameters!DescricaoProblema.Value</Value>
@@ -1269,7 +1265,7 @@
                   <Paragraph>
                     <TextRuns>
                       <TextRun>
-                        <Value>Observações Gerais:    </Value>
+                        <Value>Observações Gerais: </Value>
                         <Style>
                           <FontWeight>Bold</FontWeight>
                         </Style>
@@ -1305,7 +1301,7 @@
                   <Paragraph>
                     <TextRuns>
                       <TextRun>
-                        <Value>Objeto:    </Value>
+                        <Value>Objeto: </Value>
                         <Style>
                           <FontWeight>Bold</FontWeight>
                         </Style>
@@ -1322,8 +1318,80 @@
                 <Top>0.72116cm</Top>
                 <Left>0.36524cm</Left>
                 <Height>0.6cm</Height>
-                <Width>17.70587cm</Width>
+                <Width>6.27027cm</Width>
                 <ZIndex>3</ZIndex>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                  <PaddingBottom>2pt</PaddingBottom>
+                </Style>
+              </Textbox>
+              <Textbox Name="PrevisaoEntrega">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>Previsão de entrega: </Value>
+                        <Style>
+                          <FontWeight>Bold</FontWeight>
+                        </Style>
+                      </TextRun>
+                      <TextRun>
+                        <Value>=Parameters!PrevisaoEntrega.Value</Value>
+                        <Style />
+                      </TextRun>
+                    </TextRuns>
+                    <Style />
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>PrevisaoEntrega</rd:DefaultName>
+                <Top>0.73731cm</Top>
+                <Left>6.78014cm</Left>
+                <Height>0.6cm</Height>
+                <Width>5.61565cm</Width>
+                <ZIndex>4</ZIndex>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                  <PaddingBottom>2pt</PaddingBottom>
+                </Style>
+              </Textbox>
+              <Textbox Name="Situacao">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>Situação: </Value>
+                        <Style>
+                          <FontWeight>Bold</FontWeight>
+                        </Style>
+                      </TextRun>
+                      <TextRun>
+                        <Value>=Parameters!Situacao.Value</Value>
+                        <Style />
+                      </TextRun>
+                    </TextRuns>
+                    <Style />
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>Situacao</rd:DefaultName>
+                <Top>0.71058cm</Top>
+                <Left>12.50163cm</Left>
+                <Height>0.6cm</Height>
+                <Width>5.59065cm</Width>
+                <ZIndex>5</ZIndex>
                 <Style>
                   <Border>
                     <Style>None</Style>
@@ -1348,7 +1416,7 @@
             </Style>
           </Rectangle>
           <Line Name="Line5">
-            <Top>13.1316cm</Top>
+            <Top>14.7191cm</Top>
             <Left>4.09787cm</Left>
             <Height>0cm</Height>
             <Width>10.32897cm</Width>
@@ -1413,7 +1481,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox12</rd:DefaultName>
-            <Top>13.29035cm</Top>
+            <Top>14.87785cm</Top>
             <Left>6.61141cm</Left>
             <Height>0.63175cm</Height>
             <Width>5.28708cm</Width>
@@ -1672,7 +1740,7 @@
             </Style>
           </Rectangle>
         </ReportItems>
-        <Height>5.48114in</Height>
+        <Height>6.10614in</Height>
         <Style />
       </Body>
       <Width>7.46359in</Width>
@@ -1733,7 +1801,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>Nº OS  </Value>
+                      <Value>Nº OS.  </Value>
                       <Style>
                         <FontSize>12pt</FontSize>
                         <FontWeight>Bold</FontWeight>
@@ -1754,14 +1822,15 @@
               </Paragraphs>
               <rd:DefaultName>NumeroOS</rd:DefaultName>
               <Top>0.42015cm</Top>
-              <Left>13.09494cm</Left>
+              <Left>15.47642cm</Left>
               <Height>0.6cm</Height>
-              <Width>5.30625cm</Width>
+              <Width>3.09096cm</Width>
               <ZIndex>3</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
                 </Border>
+                <BackgroundColor>LightGrey</BackgroundColor>
                 <PaddingLeft>2pt</PaddingLeft>
                 <PaddingRight>2pt</PaddingRight>
                 <PaddingTop>2pt</PaddingTop>
@@ -2233,19 +2302,13 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>Página[</Value>
+                      <Value>Página </Value>
                       <Style>
                         <FontWeight>Bold</FontWeight>
                       </Style>
                     </TextRun>
                     <TextRun>
                       <Value>=Globals!PageNumber</Value>
-                      <Style>
-                        <FontWeight>Bold</FontWeight>
-                      </Style>
-                    </TextRun>
-                    <TextRun>
-                      <Value>]</Value>
                       <Style>
                         <FontWeight>Bold</FontWeight>
                       </Style>
@@ -2477,6 +2540,18 @@
       <AllowBlank>true</AllowBlank>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
+    <ReportParameter Name="PrevisaoEntrega">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Situacao">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
   </ReportParameters>
   <ReportParametersLayout>
     <GridLayoutDefinition>
@@ -2627,6 +2702,16 @@
           <ColumnIndex>1</ColumnIndex>
           <RowIndex>7</RowIndex>
           <ParameterName>UFCliente</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>2</ColumnIndex>
+          <RowIndex>7</RowIndex>
+          <ParameterName>PrevisaoEntrega</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>3</ColumnIndex>
+          <RowIndex>7</RowIndex>
+          <ParameterName>Situacao</ParameterName>
         </CellDefinition>
       </CellDefinitions>
     </GridLayoutDefinition>
