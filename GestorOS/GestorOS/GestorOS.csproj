@@ -166,6 +166,7 @@
     <Compile Include="FrmTodosUnidadeMedidas.Designer.cs">
       <DependentUpon>FrmTodosUnidadeMedidas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Mensagem.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Caixa.cs" />
     <Compile Include="Models\Cliente.cs" />
