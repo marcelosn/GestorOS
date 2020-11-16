@@ -24,10 +24,10 @@ namespace GestorOS
         public void CarregaReportComprovanteOrdemServico(int ordemServicoId)
         {
             var ordemServico = meuDataContext.OrdemServicos
-                                             .AsNoTracking()
                                              .Include("Cliente")
                                              .Include("Objeto")
                                              .Include("SituacaoOrdemServico")
+                                             .AsNoTracking()
                                              .Where(os => os.Id == ordemServicoId).FirstOrDefault();
 
             var endereco = meuDataContext.Enderecos.AsNoTracking().Where(e => e.ClienteId == ordemServico.ClienteId).FirstOrDefault();

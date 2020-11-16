@@ -142,3 +142,4 @@ C:\Users\USER\Documents\GitHub\GestorOS\GestorOS\GestorOS\obj\Debug\GestorOS.csp
 C:\Users\USER\Documents\GitHub\GestorOS\GestorOS\GestorOS\obj\Debug\GestorOS.FrmTodosProdutos.resources
 C:\Users\USER\Documents\GitHub\GestorOS\GestorOS\GestorOS\obj\Debug\GestorOS.FrmTodosServicos.resources
 C:\Users\USER\Documents\GitHub\GestorOS\GestorOS\GestorOS\obj\Debug\GestorOS.FrmTodosUnidadeMedidas.resources
+C:\Users\USER\Documents\GitHub\GestorOS\GestorOS\GestorOS\obj\Debug\GestorOS.FrmCliente.resources

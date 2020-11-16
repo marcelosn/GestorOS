@@ -84,5 +84,11 @@ namespace GestorOS
                 this.Close();
             }
         }
+
+        private void clienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmCliente frm = new FrmCliente();
+            frm.ShowDialog();
+        }
     }
 }

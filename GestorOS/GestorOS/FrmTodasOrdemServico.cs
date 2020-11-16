@@ -36,14 +36,14 @@ namespace GestorOS
             DateTime dtFinal = Convert.ToDateTime(txtDataFinal.Text);
 
             ordemServicos = meuDataContext.OrdemServicos
-                                          .AsNoTracking()
                                           .Include("Cliente")
                                           .Include("SituacaoOrdemServico")
                                           .Include("Objeto")
+                                          .AsNoTracking()
                                           .Where(o => o.DataHoraCadastro >= dtInicial
                                                    && o.DataHoraCadastro <= dtFinal
                                                    && o.Cliente.NomeFantasia.Contains(txtBuscar.Text))
-                                           .OrderBy(o => o.DataHoraCadastro).ToList();
+                                          .OrderBy(o => o.DataHoraCadastro).ToList();
             if (ordemServicos.Count > 0)
             {
                 lwOrdemSevicos.Items.Clear();

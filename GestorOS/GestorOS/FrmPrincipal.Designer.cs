@@ -55,6 +55,7 @@
             this.suporteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabelRegistradoPara = new System.Windows.Forms.ToolStripStatusLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.toolStripBarraMenus = new System.Windows.Forms.ToolStrip();
             this.tsClientes = new System.Windows.Forms.ToolStripButton();
@@ -70,7 +71,6 @@
             this.tsObjetos = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.tsOrdemServico = new System.Windows.Forms.ToolStripButton();
-            this.toolStripStatusLabelRegistradoPara = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -119,6 +119,7 @@
             this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
             this.clienteToolStripMenuItem.Size = new System.Drawing.Size(220, 24);
             this.clienteToolStripMenuItem.Text = "Cliente";
+            this.clienteToolStripMenuItem.Click += new System.EventHandler(this.clienteToolStripMenuItem_Click);
             // 
             // produtoToolStripMenuItem
             // 
@@ -278,6 +279,14 @@
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(430, 17);
             this.toolStripStatusLabel1.Text = "Versão inicial: 15-10-2020 | Desenvolvido por: Luís Antônio Oliveira Maia";
             // 
+            // toolStripStatusLabelRegistradoPara
+            // 
+            this.toolStripStatusLabelRegistradoPara.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripStatusLabelRegistradoPara.ForeColor = System.Drawing.Color.White;
+            this.toolStripStatusLabelRegistradoPara.Name = "toolStripStatusLabelRegistradoPara";
+            this.toolStripStatusLabelRegistradoPara.Size = new System.Drawing.Size(131, 17);
+            this.toolStripStatusLabelRegistradoPara.Text = "toolStripStatusLabel2";
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -432,14 +441,6 @@
             this.tsOrdemServico.Text = "Ordem de Serviço";
             this.tsOrdemServico.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tsOrdemServico.Click += new System.EventHandler(this.tsOrdemServico_Click);
-            // 
-            // toolStripStatusLabelRegistradoPara
-            // 
-            this.toolStripStatusLabelRegistradoPara.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripStatusLabelRegistradoPara.ForeColor = System.Drawing.Color.White;
-            this.toolStripStatusLabelRegistradoPara.Name = "toolStripStatusLabelRegistradoPara";
-            this.toolStripStatusLabelRegistradoPara.Size = new System.Drawing.Size(131, 17);
-            this.toolStripStatusLabelRegistradoPara.Text = "toolStripStatusLabel2";
             // 
             // FrmPrincipal
             // 

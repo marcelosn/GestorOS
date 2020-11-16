@@ -50,15 +50,17 @@ namespace GestorOS
 
         private void btnNovo_Click(object sender, EventArgs e)
         {
-
+            FrmCliente frm = new FrmCliente();
+            frm.ShowDialog();
+            CarregarTodosClientes();
         }
 
 
         private void CarregarTodosClientes()
         {
             var clientes = meuDataContext.Clientes.AsNoTracking()
-                                                .Where(s => s.NomeFantasia.Contains(txtBuscar.Text) || s.Documento.Contains(txtBuscar.Text))
-                                                .OrderBy(s => s.NomeFantasia).ToList();
+                                                  .Where(s => s.NomeFantasia.Contains(txtBuscar.Text) || s.Documento.Contains(txtBuscar.Text))
+                                                  .OrderBy(s => s.NomeFantasia).ToList();
             if (clientes.Count > 0)
             {
                 lwClientes.Items.Clear();
