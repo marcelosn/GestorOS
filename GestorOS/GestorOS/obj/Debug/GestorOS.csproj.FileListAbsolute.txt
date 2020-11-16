@@ -141,3 +141,4 @@ C:\Users\USER\Documents\GitHub\GestorOS\GestorOS\GestorOS\obj\Debug\RdlCompile.c
 C:\Users\USER\Documents\GitHub\GestorOS\GestorOS\GestorOS\obj\Debug\GestorOS.csprojAssemblyReference.cache
 C:\Users\USER\Documents\GitHub\GestorOS\GestorOS\GestorOS\obj\Debug\GestorOS.FrmTodosProdutos.resources
 C:\Users\USER\Documents\GitHub\GestorOS\GestorOS\GestorOS\obj\Debug\GestorOS.FrmTodosServicos.resources
+C:\Users\USER\Documents\GitHub\GestorOS\GestorOS\GestorOS\obj\Debug\GestorOS.FrmTodosUnidadeMedidas.resources
