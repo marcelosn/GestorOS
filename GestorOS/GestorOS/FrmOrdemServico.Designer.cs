@@ -39,6 +39,7 @@
             this.txtValorTotal = new System.Windows.Forms.TextBox();
             this.lwItensOrdemServico = new System.Windows.Forms.ListView();
             this.columnHeaderItem = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderTipo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderCod = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderServProd = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderQtde = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -84,7 +85,6 @@
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnAdicionarProdSerc = new System.Windows.Forms.Button();
             this.btnFinalizar = new System.Windows.Forms.Button();
-            this.columnHeaderTipo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -199,7 +199,7 @@
             this.lwItensOrdemServico.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lwItensOrdemServico.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lwItensOrdemServico.BackColor = System.Drawing.Color.SeaShell;
             this.lwItensOrdemServico.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lwItensOrdemServico.CheckBoxes = true;
             this.lwItensOrdemServico.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -225,6 +225,11 @@
             // 
             this.columnHeaderItem.Text = "Item";
             this.columnHeaderItem.Width = 55;
+            // 
+            // columnHeaderTipo
+            // 
+            this.columnHeaderTipo.Text = "Tipo";
+            this.columnHeaderTipo.Width = 105;
             // 
             // columnHeaderCod
             // 
@@ -712,11 +717,6 @@
             this.btnFinalizar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnFinalizar.UseVisualStyleBackColor = true;
             this.btnFinalizar.Click += new System.EventHandler(this.btnFinalizar_Click);
-            // 
-            // columnHeaderTipo
-            // 
-            this.columnHeaderTipo.Text = "Tipo";
-            this.columnHeaderTipo.Width = 105;
             // 
             // FrmOrdemServico
             // 

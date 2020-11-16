@@ -1,23 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
+﻿using GestorOS.Data;
+using System;
+using System.Data.Entity;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GestorOS
 {
     public partial class FrmPrincipal : Form
     {
+        MeuDataContext meuDataContext;
+
         public FrmPrincipal()
         {
             InitializeComponent();
 
             foreach (ToolStripItem item in toolStripBarraMenus.Items)
             {
+                meuDataContext = new MeuDataContext();
                 item.DisplayStyle = ToolStripItemDisplayStyle.ImageAndText;
             }
         }
@@ -36,12 +35,14 @@ namespace GestorOS
 
         private void tsProdutos_Click(object sender, EventArgs e)
         {
-            
+            FrmTodosProdutos frm = new FrmTodosProdutos();
+            frm.ShowDialog();
         }
 
         private void tsServicos_Click(object sender, EventArgs e)
         {
-            
+            FrmTodosServicos frm = new FrmTodosServicos();
+            frm.ShowDialog();
         }
 
         private void tsFuncionarios_Click(object sender, EventArgs e)
@@ -52,13 +53,36 @@ namespace GestorOS
 
         private void tsUnidadeMedida_Click(object sender, EventArgs e)
         {
-
+            FrmTodosUnidadeMedidas frm = new FrmTodosUnidadeMedidas();
+            frm.ShowDialog();
         }
 
         private void tsObjetos_Click(object sender, EventArgs e)
         {
             FrmTodosObjetos frmTodosObjetos = new FrmTodosObjetos();
             frmTodosObjetos.ShowDialog();
+        }
+
+        private void FrmPrincipal_Load(object sender, EventArgs e)
+        {
+            CarregaDadosRegistroSotware();
+        }
+
+        private void CarregaDadosRegistroSotware()
+        {
+            var empresa = meuDataContext.Empresas.Take(1).FirstOrDefault();
+
+            if (empresa != null)
+            {
+                toolStripStatusLabelRegistradoPara.Text = " | Software registrado para: " + empresa.NomeFantasia + " - CNPJ: " + empresa.Documento;
+            }
+            else
+            {
+                MessageBox.Show("ATENÇAO!\n\n Este Software não foi registrado. Favor entrar em contato com " +
+                                "o administrador do sistema  através do contato\n\nDesenvolvedor: Luís Antônio Oliveira Maia\nCelular: (69)99271-8454",
+                                "Mensagem do Desenvolvedor", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                this.Close();
+            }
         }
     }
 }

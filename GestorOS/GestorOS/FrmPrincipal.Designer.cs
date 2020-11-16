@@ -70,6 +70,7 @@
             this.tsObjetos = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.tsOrdemServico = new System.Windows.Forms.ToolStripButton();
+            this.toolStripStatusLabelRegistradoPara = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -262,7 +263,8 @@
             // 
             this.statusStrip1.BackColor = System.Drawing.Color.SteelBlue;
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel1});
+            this.toolStripStatusLabel1,
+            this.toolStripStatusLabelRegistradoPara});
             this.statusStrip1.Location = new System.Drawing.Point(0, 589);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(1372, 22);
@@ -431,6 +433,14 @@
             this.tsOrdemServico.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tsOrdemServico.Click += new System.EventHandler(this.tsOrdemServico_Click);
             // 
+            // toolStripStatusLabelRegistradoPara
+            // 
+            this.toolStripStatusLabelRegistradoPara.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripStatusLabelRegistradoPara.ForeColor = System.Drawing.Color.White;
+            this.toolStripStatusLabelRegistradoPara.Name = "toolStripStatusLabelRegistradoPara";
+            this.toolStripStatusLabelRegistradoPara.Size = new System.Drawing.Size(131, 17);
+            this.toolStripStatusLabelRegistradoPara.Text = "toolStripStatusLabel2";
+            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -450,6 +460,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sistema para gestão de ordem de serviço";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FrmPrincipal_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
@@ -505,6 +516,7 @@
         private System.Windows.Forms.ToolStripMenuItem contasAReceberToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aberturaEFechamentoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem formaDePagamentoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelRegistradoPara;
     }
 }
 

@@ -53,7 +53,7 @@
             this.lwProdutosServicos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lwProdutosServicos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lwProdutosServicos.BackColor = System.Drawing.Color.SeaShell;
             this.lwProdutosServicos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lwProdutosServicos.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeaderCodigo,

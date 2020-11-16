@@ -276,7 +276,7 @@
             this.lwPagamentosOrdemServico.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lwPagamentosOrdemServico.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lwPagamentosOrdemServico.BackColor = System.Drawing.Color.SeaShell;
             this.lwPagamentosOrdemServico.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lwPagamentosOrdemServico.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeaderTipo,
@@ -341,7 +341,7 @@
             this.lwTipoFormaPagamentos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lwTipoFormaPagamentos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lwTipoFormaPagamentos.BackColor = System.Drawing.Color.SeaShell;
             this.lwTipoFormaPagamentos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lwTipoFormaPagamentos.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeaderCodigo,

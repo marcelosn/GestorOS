@@ -13,7 +13,6 @@ namespace GestorOS
     {
         MeuDataContext meuDataContext;
         IList<OrdemServico> ordemServicos = new List<OrdemServico>();
-        int qtde;
         decimal valorTotalServico;
         decimal valorTotalProduto;
         decimal valorDesconto;
@@ -71,7 +70,6 @@ namespace GestorOS
         {
             if (ordemServicos.Count != 0)
             {
-                qtde = 0;
                 valorDesconto = 0;
                 valorTotal = 0;
                 valorTotalProduto = 0;

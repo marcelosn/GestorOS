@@ -33,9 +33,7 @@
             this.btnNovo = new System.Windows.Forms.Button();
             this.lwObjetos = new System.Windows.Forms.ListView();
             this.columnHeaderCodigo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeaderCliente = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeaderDOCUMENTO = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeaderCelular = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderObjeto = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -71,12 +69,11 @@
             this.lwObjetos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.lwObjetos.BackColor = System.Drawing.Color.SeaShell;
             this.lwObjetos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lwObjetos.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeaderCodigo,
-            this.columnHeaderCliente,
-            this.columnHeaderDOCUMENTO,
-            this.columnHeaderCelular});
+            this.columnHeaderObjeto});
             this.lwObjetos.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lwObjetos.FullRowSelect = true;
             this.lwObjetos.GridLines = true;
@@ -93,21 +90,10 @@
             this.columnHeaderCodigo.Text = "Código";
             this.columnHeaderCodigo.Width = 64;
             // 
-            // columnHeaderCliente
+            // columnHeaderObjeto
             // 
-            this.columnHeaderCliente.Text = "Cliente";
-            this.columnHeaderCliente.Width = 379;
-            // 
-            // columnHeaderDOCUMENTO
-            // 
-            this.columnHeaderDOCUMENTO.Text = "Documento";
-            this.columnHeaderDOCUMENTO.Width = 163;
-            // 
-            // columnHeaderCelular
-            // 
-            this.columnHeaderCelular.Text = "Celular";
-            this.columnHeaderCelular.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.columnHeaderCelular.Width = 117;
+            this.columnHeaderObjeto.Text = "Objeto/Equipamento";
+            this.columnHeaderObjeto.Width = 644;
             // 
             // txtBuscar
             // 
@@ -123,7 +109,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(800, 468);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -145,9 +131,7 @@
         private System.Windows.Forms.Button btnNovo;
         private System.Windows.Forms.ListView lwObjetos;
         private System.Windows.Forms.ColumnHeader columnHeaderCodigo;
-        private System.Windows.Forms.ColumnHeader columnHeaderCliente;
-        private System.Windows.Forms.ColumnHeader columnHeaderDOCUMENTO;
-        private System.Windows.Forms.ColumnHeader columnHeaderCelular;
+        private System.Windows.Forms.ColumnHeader columnHeaderObjeto;
         private System.Windows.Forms.TextBox txtBuscar;
     }
 }
