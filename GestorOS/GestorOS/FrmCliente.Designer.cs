@@ -59,7 +59,6 @@
             this.txtOrgaoEmissor = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtDataNascimento = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.txtRG = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -68,6 +67,7 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.txtDataNascimento = new System.Windows.Forms.MaskedTextBox();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -82,7 +82,7 @@
             this.panel1.Controls.Add(this.tabControl1);
             this.panel1.Location = new System.Drawing.Point(12, 10);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(664, 582);
+            this.panel1.Size = new System.Drawing.Size(691, 582);
             this.panel1.TabIndex = 0;
             // 
             // tabControl1
@@ -93,7 +93,7 @@
             this.tabControl1.Location = new System.Drawing.Point(10, 8);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(646, 566);
+            this.tabControl1.Size = new System.Drawing.Size(676, 566);
             this.tabControl1.TabIndex = 14;
             // 
             // tabPage1
@@ -106,7 +106,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 29);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(638, 533);
+            this.tabPage1.Size = new System.Drawing.Size(668, 533);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Pessoa Física";
             // 
@@ -122,7 +122,7 @@
             this.groupBox3.ForeColor = System.Drawing.Color.Black;
             this.groupBox3.Location = new System.Drawing.Point(9, 375);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(618, 147);
+            this.groupBox3.Size = new System.Drawing.Size(649, 147);
             this.groupBox3.TabIndex = 11;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Informações para contato";
@@ -133,7 +133,7 @@
             this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(10, 104);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(599, 30);
+            this.txtEmail.Size = new System.Drawing.Size(628, 30);
             this.txtEmail.TabIndex = 17;
             // 
             // label12
@@ -150,17 +150,21 @@
             // 
             this.txtTelefoneFixo.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefoneFixo.Location = new System.Drawing.Point(216, 44);
+            this.txtTelefoneFixo.Mask = "(99)9999-9999";
             this.txtTelefoneFixo.Name = "txtTelefoneFixo";
             this.txtTelefoneFixo.Size = new System.Drawing.Size(200, 30);
             this.txtTelefoneFixo.TabIndex = 16;
+            this.txtTelefoneFixo.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // txtCelular
             // 
             this.txtCelular.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCelular.Location = new System.Drawing.Point(12, 44);
+            this.txtCelular.Mask = "(99)99999-9999";
             this.txtCelular.Name = "txtCelular";
             this.txtCelular.Size = new System.Drawing.Size(198, 30);
             this.txtCelular.TabIndex = 15;
+            this.txtCelular.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // label11
             // 
@@ -202,7 +206,7 @@
             this.groupBox2.ForeColor = System.Drawing.Color.Black;
             this.groupBox2.Location = new System.Drawing.Point(9, 159);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(618, 209);
+            this.groupBox2.Size = new System.Drawing.Size(649, 209);
             this.groupBox2.TabIndex = 10;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Informações do enderço";
@@ -213,7 +217,7 @@
             this.txtComplemento.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtComplemento.Location = new System.Drawing.Point(12, 163);
             this.txtComplemento.Name = "txtComplemento";
-            this.txtComplemento.Size = new System.Drawing.Size(597, 30);
+            this.txtComplemento.Size = new System.Drawing.Size(626, 30);
             this.txtComplemento.TabIndex = 14;
             // 
             // label14
@@ -273,7 +277,7 @@
             "TO"});
             this.txtUF.Location = new System.Drawing.Point(523, 102);
             this.txtUF.Name = "txtUF";
-            this.txtUF.Size = new System.Drawing.Size(86, 31);
+            this.txtUF.Size = new System.Drawing.Size(115, 31);
             this.txtUF.TabIndex = 13;
             this.txtUF.Text = "--Selecione--";
             // 
@@ -319,9 +323,11 @@
             // 
             this.txtCEP.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCEP.Location = new System.Drawing.Point(10, 44);
+            this.txtCEP.Mask = "99999-999";
             this.txtCEP.Name = "txtCEP";
             this.txtCEP.Size = new System.Drawing.Size(165, 30);
             this.txtCEP.TabIndex = 5;
+            this.txtCEP.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // txtNumero
             // 
@@ -329,7 +335,7 @@
             this.txtNumero.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNumero.Location = new System.Drawing.Point(523, 44);
             this.txtNumero.Name = "txtNumero";
-            this.txtNumero.Size = new System.Drawing.Size(86, 30);
+            this.txtNumero.Size = new System.Drawing.Size(115, 30);
             this.txtNumero.TabIndex = 10;
             // 
             // label6
@@ -373,11 +379,11 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtDataNascimento);
             this.groupBox1.Controls.Add(this.txtCpf);
             this.groupBox1.Controls.Add(this.txtOrgaoEmissor);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.txtDataNascimento);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtRG);
             this.groupBox1.Controls.Add(this.label1);
@@ -387,7 +393,7 @@
             this.groupBox1.ForeColor = System.Drawing.Color.Black;
             this.groupBox1.Location = new System.Drawing.Point(9, 5);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(618, 149);
+            this.groupBox1.Size = new System.Drawing.Size(649, 149);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Informações básica do cliente";
@@ -396,9 +402,11 @@
             // 
             this.txtCpf.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCpf.Location = new System.Drawing.Point(181, 105);
+            this.txtCpf.Mask = "999,999,999-99";
             this.txtCpf.Name = "txtCpf";
             this.txtCpf.Size = new System.Drawing.Size(165, 30);
             this.txtCpf.TabIndex = 2;
+            this.txtCpf.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // txtOrgaoEmissor
             // 
@@ -406,7 +414,7 @@
             this.txtOrgaoEmissor.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtOrgaoEmissor.Location = new System.Drawing.Point(523, 105);
             this.txtOrgaoEmissor.Name = "txtOrgaoEmissor";
-            this.txtOrgaoEmissor.Size = new System.Drawing.Size(86, 30);
+            this.txtOrgaoEmissor.Size = new System.Drawing.Size(115, 30);
             this.txtOrgaoEmissor.TabIndex = 4;
             // 
             // label4
@@ -428,15 +436,6 @@
             this.label3.Size = new System.Drawing.Size(36, 23);
             this.label3.TabIndex = 6;
             this.label3.Text = "RG:";
-            // 
-            // txtDataNascimento
-            // 
-            this.txtDataNascimento.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDataNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.txtDataNascimento.Location = new System.Drawing.Point(10, 105);
-            this.txtDataNascimento.Name = "txtDataNascimento";
-            this.txtDataNascimento.Size = new System.Drawing.Size(165, 30);
-            this.txtDataNascimento.TabIndex = 1;
             // 
             // label2
             // 
@@ -473,7 +472,7 @@
             this.txtNomeCliente.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNomeCliente.Location = new System.Drawing.Point(10, 44);
             this.txtNomeCliente.Name = "txtNomeCliente";
-            this.txtNomeCliente.Size = new System.Drawing.Size(599, 30);
+            this.txtNomeCliente.Size = new System.Drawing.Size(628, 30);
             this.txtNomeCliente.TabIndex = 0;
             this.txtNomeCliente.TabStop = false;
             // 
@@ -494,7 +493,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(638, 544);
+            this.tabPage2.Size = new System.Drawing.Size(638, 533);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Pessoa Jurídica";
             // 
@@ -503,7 +502,7 @@
             this.btnSalvar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSalvar.BackgroundImage")));
             this.btnSalvar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnSalvar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalvar.Location = new System.Drawing.Point(212, 599);
+            this.btnSalvar.Location = new System.Drawing.Point(241, 599);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(130, 41);
             this.btnSalvar.TabIndex = 18;
@@ -517,7 +516,7 @@
             this.btnCancelar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCancelar.BackgroundImage")));
             this.btnCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnCancelar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(348, 599);
+            this.btnCancelar.Location = new System.Drawing.Point(377, 599);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(158, 41);
             this.btnCancelar.TabIndex = 4;
@@ -526,12 +525,22 @@
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCancelar.UseVisualStyleBackColor = true;
             // 
+            // txtDataNascimento
+            // 
+            this.txtDataNascimento.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDataNascimento.Location = new System.Drawing.Point(10, 104);
+            this.txtDataNascimento.Mask = "99/99/9999";
+            this.txtDataNascimento.Name = "txtDataNascimento";
+            this.txtDataNascimento.Size = new System.Drawing.Size(165, 30);
+            this.txtDataNascimento.TabIndex = 1;
+            this.txtDataNascimento.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            // 
             // FrmCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(686, 647);
+            this.ClientSize = new System.Drawing.Size(715, 647);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.panel1);
@@ -572,7 +581,6 @@
         private System.Windows.Forms.TextBox txtOrgaoEmissor;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker txtDataNascimento;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox txtNumero;
         private System.Windows.Forms.Label label6;
@@ -596,5 +604,6 @@
         private System.Windows.Forms.ComboBox txtUF;
         private System.Windows.Forms.TextBox txtComplemento;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.MaskedTextBox txtDataNascimento;
     }
 }

@@ -40,15 +40,16 @@ namespace GestorOS
             {
                 Cliente cliente = new Cliente();
 
-                cliente.Celular = txtCelular.Text;
-                cliente.DataHoraCadastro = Convert.ToDateTime(DateTime.Now.ToString("dd/MM/yyyy"));
-                cliente.DataNascimento = txtDataNascimento.Value;
-                cliente.Documento = txtCpf.Text;
-                cliente.Email = txtEmail.Text;
                 cliente.NomeFantasia = txtNomeCliente.Text;
-                cliente.OrgaoEmissor = txtOrgaoEmissor.Text;
-                cliente.RG = txtRG.Text;
-                cliente.Telefone = txtTelefoneFixo.Text;
+                cliente.RazaoSocial = txtNomeCliente.Text;
+                cliente.DataHoraCadastro = Convert.ToDateTime(DateTime.Now.ToString("dd/MM/yyyy"));
+                cliente.Celular = string.IsNullOrEmpty(txtCelular.Text) ? cliente.Celular : txtCelular.Text;
+                cliente.DataNascimento = string.IsNullOrEmpty(txtDataNascimento.Text) ? cliente.DataNascimento : Convert.ToDateTime(txtDataNascimento.Text);
+                cliente.Documento = string.IsNullOrEmpty(txtCpf.Text) ? cliente.Documento : txtCpf.Text;
+                cliente.Email = string.IsNullOrEmpty(txtEmail.Text) ? cliente.Email : txtEmail.Text;
+                cliente.OrgaoEmissor = string.IsNullOrEmpty(txtOrgaoEmissor.Text) ? cliente.OrgaoEmissor : txtOrgaoEmissor.Text;
+                cliente.RG = string.IsNullOrEmpty(txtRG.Text) ? cliente.RG : txtRG.Text;
+                cliente.Telefone = string.IsNullOrEmpty(txtTelefoneFixo.Text) ? cliente.Telefone : txtTelefoneFixo.Text;
                 cliente.TipoDocumento = Enum.TipoDocumento.fisica;
 
                 meuDataContext.Clientes.Add(cliente);
@@ -57,14 +58,14 @@ namespace GestorOS
                 Endereco endereco = new Endereco();
 
                 endereco.ClienteId = cliente.Id;
-                endereco.Bairro = txtBairro.Text;
-                endereco.Cep = txtCEP.Text;
-                endereco.Cidade = txtCidade.Text;
-                endereco.Complemento = txtComplemento.Text;
                 endereco.DataHoraCadastro = Convert.ToDateTime(DateTime.Now.ToString("dd/MM/yyyy"));
-                endereco.Logradouro = txtRua.Text;
-                endereco.Numero = txtNumero.Text;
-                endereco.UF = txtUF.SelectedItem.ToString();
+                endereco.Bairro = string.IsNullOrEmpty(txtBairro.Text) ? endereco.Bairro : txtBairro.Text;
+                endereco.Cep = string.IsNullOrEmpty(txtCEP.Text) ? endereco.Cep : txtCEP.Text;
+                endereco.Cidade = string.IsNullOrEmpty(txtCidade.Text) ? endereco.Cidade : txtCidade.Text;
+                endereco.Complemento = string.IsNullOrEmpty(txtComplemento.Text) ? endereco.Complemento : txtComplemento.Text;
+                endereco.Logradouro = string.IsNullOrEmpty(txtRua.Text) ? endereco.Logradouro : txtRua.Text;
+                endereco.Numero = string.IsNullOrEmpty(txtNumero.Text) ? endereco.Numero : txtNumero.Text;
+                endereco.UF = txtUF.SelectedIndex == 0 ? endereco.UF : txtUF.SelectedItem.ToString();
 
                 meuDataContext.Enderecos.Add(endereco);
                 meuDataContext.SaveChanges();
@@ -83,6 +84,13 @@ namespace GestorOS
                 txtNomeCliente.Focus();
                 return false;
             }
+            if (txtCelular.Text.Length != 11)
+            {
+                MessageBox.Show("Atenção! o campo celular é obrigatório.", "Mensagem do sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtCelular.Focus();
+                return false;
+            }
+
             return true;
         }
 

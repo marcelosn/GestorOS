@@ -79,8 +79,8 @@ namespace GestorOS
             this.reportViewOS.LocalReport.SetParameters(new ReportParameter("Observacoes", ordemServico.Observacoes));
 
             //Informaçoes - cliente
-            this.reportViewOS.LocalReport.SetParameters(new ReportParameter("Cliente", ordemServico.Cliente.NomeFantasia));
-            this.reportViewOS.LocalReport.SetParameters(new ReportParameter("DocumentoCliente", ordemServico.Cliente.Documento));
+            this.reportViewOS.LocalReport.SetParameters(new ReportParameter("Cliente", ordemServico.Cliente.NomeFantasia != null ? ordemServico.Cliente.NomeFantasia : ""));
+            this.reportViewOS.LocalReport.SetParameters(new ReportParameter("DocumentoCliente", ordemServico.Cliente.Documento != null ? ordemServico.Cliente.Documento : ""));
             this.reportViewOS.LocalReport.SetParameters(new ReportParameter("Email", ordemServico.Cliente.Email != null ? ordemServico.Cliente.Email : ""));
             this.reportViewOS.LocalReport.SetParameters(new ReportParameter("Celular", ordemServico.Cliente.Celular != null ? ordemServico.Cliente.Celular : ""));
             this.reportViewOS.LocalReport.SetParameters(new ReportParameter("CepCliente", endereco != null ? endereco.Cep : ""));
