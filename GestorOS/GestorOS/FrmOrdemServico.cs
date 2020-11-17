@@ -15,7 +15,7 @@ namespace GestorOS
         IList<OrdemServicoItem> listaItemOrdemServico = new List<OrdemServicoItem>();
         IList<FormaPagamentoOrdemServico> listaFormaPgtoOS = new List<FormaPagamentoOrdemServico>();
 
-        int? ordemServico = null;
+        int? ordemServicoId = null;
         int item = 1;
         int codigoOperador = 1;
         int qtde;
@@ -35,7 +35,7 @@ namespace GestorOS
 
         private void FrmOrdemServico_Load(object sender, EventArgs e)
         {
-            if (ordemServico == null)
+            if (ordemServicoId == null)
             {
                 IniciarNovaOrdemServico();
                 txtCodigoOperador.Text = codigoOperador.ToString();
@@ -45,7 +45,7 @@ namespace GestorOS
 
         public void CarregaOrdemServicoEditar(int ordemServicoId)
         {
-            this.ordemServico = ordemServicoId;
+            this.ordemServicoId = ordemServicoId;
 
             var ordemServico = meuDataContext.OrdemServicos
                                               .AsNoTracking()

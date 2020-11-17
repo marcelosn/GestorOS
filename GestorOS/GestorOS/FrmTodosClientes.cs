@@ -81,5 +81,16 @@ namespace GestorOS
         {
             CarregarTodosClientes();
         }
+
+        private void editarOrdemDeServiçoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (lwClientes.Items.Count > 0)
+            {
+                int clienteId = int.Parse(lwClientes.FocusedItem.SubItems[0].Text);
+                FrmCliente frm = new FrmCliente();
+                frm.CarregaClienteEditar(clienteId);
+                frm.ShowDialog();
+            }
+        }
     }
 }

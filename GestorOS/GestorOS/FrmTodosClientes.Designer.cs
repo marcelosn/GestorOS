@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTodosClientes));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnNovo = new System.Windows.Forms.Button();
@@ -37,7 +38,10 @@
             this.columnHeaderDOCUMENTO = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderCelular = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.editarOrdemDeServiçoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -78,6 +82,7 @@
             this.columnHeaderCliente,
             this.columnHeaderDOCUMENTO,
             this.columnHeaderCelular});
+            this.lwClientes.ContextMenuStrip = this.contextMenuStrip1;
             this.lwClientes.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lwClientes.FullRowSelect = true;
             this.lwClientes.GridLines = true;
@@ -120,6 +125,22 @@
             this.txtBuscar.TabIndex = 0;
             this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.editarOrdemDeServiçoToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(164, 28);
+            // 
+            // editarOrdemDeServiçoToolStripMenuItem
+            // 
+            this.editarOrdemDeServiçoToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editarOrdemDeServiçoToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("editarOrdemDeServiçoToolStripMenuItem.Image")));
+            this.editarOrdemDeServiçoToolStripMenuItem.Name = "editarOrdemDeServiçoToolStripMenuItem";
+            this.editarOrdemDeServiçoToolStripMenuItem.Size = new System.Drawing.Size(163, 24);
+            this.editarOrdemDeServiçoToolStripMenuItem.Text = "Editar cliente";
+            this.editarOrdemDeServiçoToolStripMenuItem.Click += new System.EventHandler(this.editarOrdemDeServiçoToolStripMenuItem_Click);
+            // 
             // FrmTodosClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -136,6 +157,7 @@
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmTodosClientes_KeyDown);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -150,5 +172,7 @@
         private System.Windows.Forms.ColumnHeader columnHeaderDOCUMENTO;
         private System.Windows.Forms.ColumnHeader columnHeaderCelular;
         private System.Windows.Forms.TextBox txtBuscar;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem editarOrdemDeServiçoToolStripMenuItem;
     }
 }

@@ -59,7 +59,7 @@ namespace GestorOS
                 itemCount++;
             }
             
-            //Cabeçalho - empresa
+            //Cabeçalho - empresa - dados obrigatórios
             this.reportViewOS.LocalReport.SetParameters(new ReportParameter("NumeroOS", Utilitarios.AdicionaZero(ordemServico.Id.ToString())));
             this.reportViewOS.LocalReport.SetParameters(new ReportParameter("Documento", empresa.Documento));
             this.reportViewOS.LocalReport.SetParameters(new ReportParameter("RazaoSocial", empresa.RazaoSocial));

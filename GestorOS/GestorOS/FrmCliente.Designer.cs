@@ -55,6 +55,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtDataNascimento = new System.Windows.Forms.MaskedTextBox();
             this.txtCpf = new System.Windows.Forms.MaskedTextBox();
             this.txtOrgaoEmissor = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -67,7 +68,6 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.txtDataNascimento = new System.Windows.Forms.MaskedTextBox();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -209,7 +209,7 @@
             this.groupBox2.Size = new System.Drawing.Size(649, 209);
             this.groupBox2.TabIndex = 10;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Informações do enderço";
+            this.groupBox2.Text = "Informações do endereço";
             // 
             // txtComplemento
             // 
@@ -398,6 +398,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Informações básica do cliente";
             // 
+            // txtDataNascimento
+            // 
+            this.txtDataNascimento.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDataNascimento.Location = new System.Drawing.Point(10, 104);
+            this.txtDataNascimento.Mask = "99/99/9999";
+            this.txtDataNascimento.Name = "txtDataNascimento";
+            this.txtDataNascimento.Size = new System.Drawing.Size(165, 30);
+            this.txtDataNascimento.TabIndex = 1;
+            // 
             // txtCpf
             // 
             this.txtCpf.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -493,7 +502,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(638, 533);
+            this.tabPage2.Size = new System.Drawing.Size(668, 533);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Pessoa Jurídica";
             // 
@@ -524,16 +533,7 @@
             this.btnCancelar.Text = "Cancelar - ESC";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCancelar.UseVisualStyleBackColor = true;
-            // 
-            // txtDataNascimento
-            // 
-            this.txtDataNascimento.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDataNascimento.Location = new System.Drawing.Point(10, 104);
-            this.txtDataNascimento.Mask = "99/99/9999";
-            this.txtDataNascimento.Name = "txtDataNascimento";
-            this.txtDataNascimento.Size = new System.Drawing.Size(165, 30);
-            this.txtDataNascimento.TabIndex = 1;
-            this.txtDataNascimento.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // FrmCliente
             // 

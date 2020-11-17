@@ -16,6 +16,8 @@ namespace GestorOS
     {
         MeuDataContext meuDataContext;
 
+        int? clienteId = null;
+
         public FrmCliente()
         {
             InitializeComponent();
@@ -36,6 +38,22 @@ namespace GestorOS
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
+            //Novo
+            if(clienteId == null)
+            {
+                Salvar();
+            }
+            //Editar
+            else
+            {
+                Mensagem.MensgemAlteracao("Cliente");
+
+                this.Close();
+            }
+        }
+
+        private void Salvar()
+        {
             if (ValidarCamposObrigatorios())
             {
                 Cliente cliente = new Cliente();
@@ -44,7 +62,9 @@ namespace GestorOS
                 cliente.RazaoSocial = txtNomeCliente.Text;
                 cliente.DataHoraCadastro = Convert.ToDateTime(DateTime.Now.ToString("dd/MM/yyyy"));
                 cliente.Celular = string.IsNullOrEmpty(txtCelular.Text) ? cliente.Celular : txtCelular.Text;
+
                 cliente.DataNascimento = string.IsNullOrEmpty(txtDataNascimento.Text) ? cliente.DataNascimento : Convert.ToDateTime(txtDataNascimento.Text);
+
                 cliente.Documento = string.IsNullOrEmpty(txtCpf.Text) ? cliente.Documento : txtCpf.Text;
                 cliente.Email = string.IsNullOrEmpty(txtEmail.Text) ? cliente.Email : txtEmail.Text;
                 cliente.OrgaoEmissor = string.IsNullOrEmpty(txtOrgaoEmissor.Text) ? cliente.OrgaoEmissor : txtOrgaoEmissor.Text;
@@ -75,7 +95,7 @@ namespace GestorOS
                 this.Close();
             }
         }
-        
+
         private bool ValidarCamposObrigatorios()
         {
             if (string.IsNullOrWhiteSpace(txtNomeCliente.Text))
@@ -96,7 +116,29 @@ namespace GestorOS
 
         private void FrmCliente_Load(object sender, EventArgs e)
         {
-            txtNomeCliente.Focus();
+            if (clienteId == null)
+            {
+                txtNomeCliente.Focus();
+            }
+        }
+
+        public void CarregaClienteEditar(int clienteId)
+        {
+            this.clienteId = clienteId;
+
+            var cliente = meuDataContext.Clientes.Find(clienteId);
+
+            if(cliente != null)
+            {
+                txtNomeCliente.Text = cliente.NomeFantasia;
+                txtCpf.Text = cliente.Documento;
+                txtDataNascimento.Text = cliente.DataNascimento.ToString();
+            }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
