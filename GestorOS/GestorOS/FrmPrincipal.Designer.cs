@@ -130,6 +130,7 @@
             this.produtoToolStripMenuItem.Name = "produtoToolStripMenuItem";
             this.produtoToolStripMenuItem.Size = new System.Drawing.Size(220, 26);
             this.produtoToolStripMenuItem.Text = "Produto";
+            this.produtoToolStripMenuItem.Click += new System.EventHandler(this.produtoToolStripMenuItem_Click);
             // 
             // serviçoToolStripMenuItem
             // 

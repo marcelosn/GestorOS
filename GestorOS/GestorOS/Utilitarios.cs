@@ -15,6 +15,16 @@ namespace GestorOS.App
             return numero;
         }
 
+        public static string AdicionaZeroCodigoBarra(string numero)
+        {
+            while (numero.Length < 13)
+            {
+                numero = "0" + numero;
+            }
+
+            return numero;
+        }
+
         //Método escreve valor decimal valor por extenso
         #region
         public static string Extenso_Valor(decimal pdbl_Valor)

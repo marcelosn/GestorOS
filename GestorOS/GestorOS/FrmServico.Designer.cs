@@ -168,6 +168,7 @@
             // 
             this.txtUnidadeMedida.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.txtUnidadeMedida.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.txtUnidadeMedida.Enabled = false;
             this.txtUnidadeMedida.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUnidadeMedida.FormattingEnabled = true;
             this.txtUnidadeMedida.Items.AddRange(new object[] {

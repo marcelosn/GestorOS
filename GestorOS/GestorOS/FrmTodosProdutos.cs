@@ -26,9 +26,10 @@ namespace GestorOS
 
         private void btnNovo_Click(object sender, EventArgs e)
         {
-
+            FrmProduto frm = new FrmProduto();
+            frm.ShowDialog();
+            CarregarTodosProdutos();
         }
-
 
         private void CarregarTodosProdutos()
         {
@@ -45,10 +46,12 @@ namespace GestorOS
                 foreach (var produto in produtos)
                 {
                     lwProdutos.Items.Add(produto.Id.ToString());
+                    lwProdutos.Items[item].SubItems.Add(produto.CodigoBarra);
                     lwProdutos.Items[item].SubItems.Add(produto.Nome);
                     lwProdutos.Items[item].SubItems.Add(produto.UnidadeMedida.Nome);
-                    lwProdutos.Items[item].SubItems.Add(produto.PrecoVenda.ToString("N2"));
                     lwProdutos.Items[item].SubItems.Add(produto.PrecoCusto.ToString("N2"));
+                    lwProdutos.Items[item].SubItems.Add(produto.PrecoVenda.ToString("N2"));
+                    lwProdutos.Items[item].SubItems.Add(produto.MargemLucro + "%");
                     lwProdutos.Items[item].SubItems.Add(produto.QtdeMinima.ToString());
                     lwProdutos.Items[item].SubItems.Add(produto.QtdeMaxima.ToString());
                     lwProdutos.Items[item].SubItems.Add(produto.QtdeEstoque.ToString());
@@ -83,6 +86,18 @@ namespace GestorOS
                 produto = meuDataContext.Produtos.Find(produtoId);
 
                 this.Close();
+            }
+        }
+
+        private void editarOrdemDeServiçoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (lwProdutos.Items.Count > 0)
+            {
+                int produtoId = int.Parse(lwProdutos.FocusedItem.SubItems[0].Text);
+                FrmProduto frm = new FrmProduto();
+                frm.CarregaProdutoEditar(produtoId);
+                frm.ShowDialog();
+                CarregarTodosProdutos();
             }
         }
     }

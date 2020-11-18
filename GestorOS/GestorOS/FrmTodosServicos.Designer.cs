@@ -28,18 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTodosServicos));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnNovo = new System.Windows.Forms.Button();
             this.lwServicos = new System.Windows.Forms.ListView();
             this.columnHeaderCodigo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderServico = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.columnHeaderUnidade = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderValor = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderComissao = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderValorComiss = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeaderUnidade = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.editarOrdemDeServiçoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -82,9 +86,11 @@
             this.columnHeaderValor,
             this.columnHeaderComissao,
             this.columnHeaderValorComiss});
+            this.lwServicos.ContextMenuStrip = this.contextMenuStrip1;
             this.lwServicos.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lwServicos.FullRowSelect = true;
             this.lwServicos.GridLines = true;
+            this.lwServicos.HideSelection = false;
             this.lwServicos.Location = new System.Drawing.Point(9, 51);
             this.lwServicos.Name = "lwServicos";
             this.lwServicos.Size = new System.Drawing.Size(898, 379);
@@ -103,15 +109,10 @@
             this.columnHeaderServico.Text = "Serviço";
             this.columnHeaderServico.Width = 371;
             // 
-            // txtBuscar
+            // columnHeaderUnidade
             // 
-            this.txtBuscar.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtBuscar.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.Location = new System.Drawing.Point(9, 9);
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(711, 33);
-            this.txtBuscar.TabIndex = 0;
-            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
+            this.columnHeaderUnidade.Text = "Unidade";
+            this.columnHeaderUnidade.Width = 110;
             // 
             // columnHeaderValor
             // 
@@ -131,10 +132,31 @@
             this.columnHeaderValorComiss.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.columnHeaderValorComiss.Width = 120;
             // 
-            // columnHeaderUnidade
+            // txtBuscar
             // 
-            this.columnHeaderUnidade.Text = "Unidade";
-            this.columnHeaderUnidade.Width = 110;
+            this.txtBuscar.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtBuscar.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscar.Location = new System.Drawing.Point(9, 9);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(711, 33);
+            this.txtBuscar.TabIndex = 0;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.editarOrdemDeServiçoToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 50);
+            // 
+            // editarOrdemDeServiçoToolStripMenuItem
+            // 
+            this.editarOrdemDeServiçoToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editarOrdemDeServiçoToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("editarOrdemDeServiçoToolStripMenuItem.Image")));
+            this.editarOrdemDeServiçoToolStripMenuItem.Name = "editarOrdemDeServiçoToolStripMenuItem";
+            this.editarOrdemDeServiçoToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.editarOrdemDeServiçoToolStripMenuItem.Text = "Editar serviço";
+            this.editarOrdemDeServiçoToolStripMenuItem.Click += new System.EventHandler(this.editarOrdemDeServiçoToolStripMenuItem_Click);
             // 
             // FrmTodosServicos
             // 
@@ -152,6 +174,7 @@
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmTodosServicos_KeyDown);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -168,5 +191,7 @@
         private System.Windows.Forms.ColumnHeader columnHeaderComissao;
         private System.Windows.Forms.ColumnHeader columnHeaderValorComiss;
         private System.Windows.Forms.TextBox txtBuscar;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem editarOrdemDeServiçoToolStripMenuItem;
     }
 }

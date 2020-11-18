@@ -10,8 +10,7 @@ namespace GestorOS
     public partial class FrmServico : Form
     {
         MeuDataContext meuDataContext;
-
-        Servico Servico;
+        Servico servico;
 
         public FrmServico()
         {
@@ -20,6 +19,18 @@ namespace GestorOS
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)
+        {
+            if (servico == null)
+            {
+                Salvar();
+            }
+            else
+            {
+                Alterar();
+            }
+        }
+
+        private void Salvar()
         {
             if (ValidarCamposObrigatorios())
             {
@@ -37,6 +48,23 @@ namespace GestorOS
                 meuDataContext.SaveChanges();
 
                 Mensagem.MensgemSucesso("Serviço");
+                this.Close();
+            }
+        }
+
+        private void Alterar()
+        {
+            if (ValidarCamposObrigatorios())
+            {
+                servico.Nome = txtDescricao.Text;
+                servico.Valor = Convert.ToDecimal(txtValor.Text);
+                servico.PercentualValorComissão = string.IsNullOrEmpty(txtValorComissao.Text) ? Convert.ToDecimal(null) : Convert.ToDecimal(txtValorComissao.Text);
+                servico.PercentualComissao = string.IsNullOrEmpty(txtComissao.Text) ? "0%" : txtComissao.Text + "%";
+
+                meuDataContext.SaveChanges();
+
+                Mensagem.MensgemAlteracao("Serviço");
+
                 this.Close();
             }
         }
@@ -68,19 +96,19 @@ namespace GestorOS
         {
             if (string.IsNullOrEmpty(txtDescricao.Text))
             {
-                MessageBox.Show("Informe o campo nome do serviço.", "Atençao", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Atenção! Informe o campo nome do serviço.", "Mensagem do sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtDescricao.Focus();
                 return false;
             }
             if(txtUnidadeMedida.SelectedIndex == 0)
             {
-                MessageBox.Show("Informe o campo unidade de medida", "Atençao", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Atenção! Informe o campo unidade de medida", "Mensagem do sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtUnidadeMedida.Focus();
                 return false;
             }
             if (string.IsNullOrEmpty(txtValor.Text))
             {
-                MessageBox.Show("Informe o campo valor do serviço.", "Atençao", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Atenção! Informe o campo valor do serviço.", "Mensagem do sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtValor.Focus();
                 return false;
             }
@@ -126,6 +154,22 @@ namespace GestorOS
             if (!string.IsNullOrEmpty(txtValor.Text))
             {
                 txtValor.Text = Convert.ToDecimal(txtValor.Text).ToString("N2");
+            }
+        }
+
+        public void CarregaServicoEditar(int servicoId)
+        {
+            servico = new Servico();
+
+            servico = meuDataContext.Servicos.Find(servicoId);
+
+            if (servico != null)
+            {
+                txtDescricao.Text = servico.Nome;
+                txtUnidadeMedida.SelectedValue = servico.UnidadeMedidaId;
+                txtValor.Text = servico.Valor.ToString("N2");
+                txtComissao.Text = servico.PercentualComissao;
+                txtValorComissao.Text = Convert.ToDecimal(servico.PercentualValorComissão).ToString("N2");
             }
         }
     }

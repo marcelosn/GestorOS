@@ -84,5 +84,17 @@ namespace GestorOS
             frm.ShowDialog();
             CarregarTodosServicos();
         }
+
+        private void editarOrdemDeServiçoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (lwServicos.Items.Count > 0)
+            {
+                int servicoId = int.Parse(lwServicos.FocusedItem.SubItems[0].Text);
+                FrmServico frm = new FrmServico();
+                frm.CarregaServicoEditar(servicoId);
+                frm.ShowDialog();
+                CarregarTodosServicos();
+            }
+        }
     }
 }

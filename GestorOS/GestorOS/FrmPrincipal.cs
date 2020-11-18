@@ -1,6 +1,7 @@
 ﻿using GestorOS.Data;
 using System;
 using System.Data.Entity;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -70,17 +71,25 @@ namespace GestorOS
 
         private void CarregaDadosRegistroSotware()
         {
-            var empresa = meuDataContext.Empresas.Take(1).FirstOrDefault();
+            try
+            {
+                var empresa = meuDataContext.Empresas.Take(1).FirstOrDefault();
 
-            if (empresa != null)
-            {
-                toolStripStatusLabelRegistradoPara.Text = " | Software registrado para: " + empresa.NomeFantasia + " - CNPJ: " + empresa.Documento;
+                if (empresa != null)
+                {
+                    toolStripStatusLabelRegistradoPara.Text = " | Software registrado para: " + empresa.NomeFantasia + " - CNPJ: " + empresa.Documento;
+                }
+                else
+                {
+                    MessageBox.Show("ATENÇAO!\n\n Este Software não foi registrado. Favor entrar em contato com " +
+                                    "o administrador do sistema  através do contato\n\nDesenvolvedor: Luís Antônio Oliveira Maia\nCelular: (69)99271-8454",
+                                    "Mensagem do Desenvolvedor", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    this.Close();
+                }
             }
-            else
+            catch(Exception msg)
             {
-                MessageBox.Show("ATENÇAO!\n\n Este Software não foi registrado. Favor entrar em contato com " +
-                                "o administrador do sistema  através do contato\n\nDesenvolvedor: Luís Antônio Oliveira Maia\nCelular: (69)99271-8454",
-                                "Mensagem do Desenvolvedor", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Atenção!\n\n" + msg.Message, "Mensagem do sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 this.Close();
             }
         }
@@ -94,6 +103,12 @@ namespace GestorOS
         private void serviçoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmServico frm = new FrmServico();
+            frm.ShowDialog();
+        }
+
+        private void produtoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmProduto frm = new FrmProduto();
             frm.ShowDialog();
         }
     }
