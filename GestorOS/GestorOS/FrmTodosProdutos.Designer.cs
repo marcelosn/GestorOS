@@ -61,7 +61,7 @@
             this.panel1.Controls.Add(this.txtBuscar);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1368, 522);
+            this.panel1.Size = new System.Drawing.Size(1315, 522);
             this.panel1.TabIndex = 3;
             // 
             // btnNovo
@@ -70,7 +70,7 @@
             this.btnNovo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNovo.Image = ((System.Drawing.Image)(resources.GetObject("btnNovo.Image")));
             this.btnNovo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNovo.Location = new System.Drawing.Point(1176, 10);
+            this.btnNovo.Location = new System.Drawing.Point(1123, 10);
             this.btnNovo.Name = "btnNovo";
             this.btnNovo.Size = new System.Drawing.Size(181, 32);
             this.btnNovo.TabIndex = 14;
@@ -104,7 +104,7 @@
             this.lwProdutos.HideSelection = false;
             this.lwProdutos.Location = new System.Drawing.Point(9, 51);
             this.lwProdutos.Name = "lwProdutos";
-            this.lwProdutos.Size = new System.Drawing.Size(1348, 457);
+            this.lwProdutos.Size = new System.Drawing.Size(1295, 457);
             this.lwProdutos.TabIndex = 13;
             this.lwProdutos.UseCompatibleStateImageBehavior = false;
             this.lwProdutos.View = System.Windows.Forms.View.Details;
@@ -118,12 +118,12 @@
             // columnHeaderCodBarra
             // 
             this.columnHeaderCodBarra.Text = "Código de Barra";
-            this.columnHeaderCodBarra.Width = 155;
+            this.columnHeaderCodBarra.Width = 135;
             // 
             // columnHeaderProduto
             // 
             this.columnHeaderProduto.Text = "Produto";
-            this.columnHeaderProduto.Width = 370;
+            this.columnHeaderProduto.Width = 350;
             // 
             // columnHeaderUnidade
             // 
@@ -134,7 +134,7 @@
             // 
             this.columnHeaderPrecoCusto.Text = "Preço Custo";
             this.columnHeaderPrecoCusto.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.columnHeaderPrecoCusto.Width = 100;
+            this.columnHeaderPrecoCusto.Width = 97;
             // 
             // columnHeaderPrecoVenda
             // 
@@ -146,25 +146,25 @@
             // 
             this.columnHeaderMargemLucro.Text = "Margem lucro";
             this.columnHeaderMargemLucro.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeaderMargemLucro.Width = 117;
+            this.columnHeaderMargemLucro.Width = 111;
             // 
             // columnHeaderQtdeMinima
             // 
             this.columnHeaderQtdeMinima.Text = "Qtde Mínima";
             this.columnHeaderQtdeMinima.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeaderQtdeMinima.Width = 110;
+            this.columnHeaderQtdeMinima.Width = 107;
             // 
             // columnHeaderQtdeMaxima
             // 
             this.columnHeaderQtdeMaxima.Text = "Qtde Máxima";
             this.columnHeaderQtdeMaxima.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeaderQtdeMaxima.Width = 110;
+            this.columnHeaderQtdeMaxima.Width = 107;
             // 
             // columnHeaderQtdeEstoque
             // 
             this.columnHeaderQtdeEstoque.Text = "Qtde Estoque";
             this.columnHeaderQtdeEstoque.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeaderQtdeEstoque.Width = 110;
+            this.columnHeaderQtdeEstoque.Width = 107;
             // 
             // contextMenuStrip1
             // 
@@ -188,7 +188,7 @@
             this.txtBuscar.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBuscar.Location = new System.Drawing.Point(9, 9);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(1161, 33);
+            this.txtBuscar.Size = new System.Drawing.Size(1108, 33);
             this.txtBuscar.TabIndex = 0;
             this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
@@ -197,7 +197,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(1392, 546);
+            this.ClientSize = new System.Drawing.Size(1339, 546);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.KeyPreview = true;

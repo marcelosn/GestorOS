@@ -232,3 +232,4 @@ C:\Users\developer-maia\Documents\GitHub\GestorOS\GestorOS\GestorOS\obj\Debug\Ge
 C:\Users\developer-maia\Documents\GitHub\GestorOS\GestorOS\GestorOS\obj\Debug\GestorOS.pdb
 C:\Users\developer-maia\Documents\GitHub\GestorOS\GestorOS\GestorOS\obj\Debug\GestorOS.csprojAssemblyReference.cache
 C:\Users\developer-maia\Documents\GitHub\GestorOS\GestorOS\GestorOS\obj\Debug\GestorOS.FrmProduto.resources
+C:\Users\USER\Documents\GitHub\GestorOS\GestorOS\GestorOS\obj\Debug\GestorOS.FrmProduto.resources

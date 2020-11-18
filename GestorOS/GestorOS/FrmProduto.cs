@@ -221,27 +221,18 @@ namespace GestorOS
                     txtValorVenda.Text = valorVenda.ToString("N2");
                     txtValorVenda.Focus();
                 }
-                //else
-                //{
-                //    MessageBox.Show("Atenção! Informe a margem de lucro em %", "Mensagem do sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                //    txtMargemLucro.Focus();
-                //}
                 if (!string.IsNullOrEmpty(txtValorVenda.Text) && Convert.ToDecimal(txtValorVenda.Text) > 0)
                 {
                     decimal valorVenda = Convert.ToDecimal(txtValorVenda.Text);
                     decimal valorCusto = Convert.ToDecimal(txtValorCusto.Text);
+                    decimal portacentagem = (valorVenda / valorCusto) - 1;
 
-                    decimal juros = ((valorCusto / valorVenda) * 100);
-                    decimal margemLucro = 100 - juros;
+                    portacentagem = (portacentagem * 100);
 
-                    txtMargemLucro.Text = margemLucro.ToString("N4");
+                    txtMargemLucro.Text = portacentagem.ToString("N");
+
                     txtMargemLucro.Focus();
                 }
-                //else
-                //{
-                //    MessageBox.Show("Atenção! Informe o campo preço de venda do produto.", "Mensagem do sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                //    txtValorVenda.Focus();
-                //}
             }
             else
             {
