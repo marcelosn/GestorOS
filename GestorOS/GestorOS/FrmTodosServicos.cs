@@ -80,7 +80,9 @@ namespace GestorOS
 
         private void btnNovo_Click(object sender, EventArgs e)
         {
-
+            FrmServico frm = new FrmServico();
+            frm.ShowDialog();
+            CarregarTodosServicos();
         }
     }
 }

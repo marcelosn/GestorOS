@@ -138,8 +138,9 @@ C:\Users\USER\Documents\GitHub\GestorOS\GestorOS\GestorOS\bin\Debug\zh-CHS\Micro
 C:\Users\USER\Documents\GitHub\GestorOS\GestorOS\GestorOS\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\USER\Documents\GitHub\GestorOS\GestorOS\GestorOS\obj\Debug\RdlCompile.cache
 C:\Users\USER\Documents\GitHub\GestorOS\GestorOS\GestorOS\obj\Debug\RdlCompile.compiled
-C:\Users\USER\Documents\GitHub\GestorOS\GestorOS\GestorOS\obj\Debug\GestorOS.csprojAssemblyReference.cache
 C:\Users\USER\Documents\GitHub\GestorOS\GestorOS\GestorOS\obj\Debug\GestorOS.FrmTodosProdutos.resources
 C:\Users\USER\Documents\GitHub\GestorOS\GestorOS\GestorOS\obj\Debug\GestorOS.FrmTodosServicos.resources
 C:\Users\USER\Documents\GitHub\GestorOS\GestorOS\GestorOS\obj\Debug\GestorOS.FrmTodosUnidadeMedidas.resources
 C:\Users\USER\Documents\GitHub\GestorOS\GestorOS\GestorOS\obj\Debug\GestorOS.FrmCliente.resources
+C:\Users\USER\Documents\GitHub\GestorOS\GestorOS\GestorOS\obj\Debug\GestorOS.csprojAssemblyReference.cache
+C:\Users\USER\Documents\GitHub\GestorOS\GestorOS\GestorOS\obj\Debug\GestorOS.FrmServico.resources

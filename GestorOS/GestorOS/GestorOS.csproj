@@ -127,6 +127,12 @@
     <Compile Include="FrmPrincipal.Designer.cs">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmServico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmServico.Designer.cs">
+      <DependentUpon>FrmServico.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmTodasOrdemServico.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -215,6 +221,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmServico.resx">
+      <DependentUpon>FrmServico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmTodasOrdemServico.resx">
       <DependentUpon>FrmTodasOrdemServico.cs</DependentUpon>

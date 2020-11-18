@@ -90,6 +90,7 @@ namespace GestorOS
                 FrmCliente frm = new FrmCliente();
                 frm.CarregaClienteEditar(clienteId);
                 frm.ShowDialog();
+                CarregarTodosClientes();
             }
         }
     }

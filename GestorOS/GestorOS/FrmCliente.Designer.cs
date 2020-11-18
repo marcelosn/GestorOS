@@ -30,8 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCliente));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -39,6 +37,19 @@
             this.txtCelular = new System.Windows.Forms.MaskedTextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblFantasia = new System.Windows.Forms.Label();
+            this.txtFantasia = new System.Windows.Forms.TextBox();
+            this.txtDataNascimento = new System.Windows.Forms.MaskedTextBox();
+            this.txtDocumento = new System.Windows.Forms.MaskedTextBox();
+            this.txtOrgaoEmissor = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtRG = new System.Windows.Forms.TextBox();
+            this.lblDocument = new System.Windows.Forms.Label();
+            this.txtNomeClienteRazaoSocial = new System.Windows.Forms.TextBox();
+            this.lblCliente = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtComplemento = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -54,61 +65,26 @@
             this.txtBairro = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtDataNascimento = new System.Windows.Forms.MaskedTextBox();
-            this.txtCpf = new System.Windows.Forms.MaskedTextBox();
-            this.txtOrgaoEmissor = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtRG = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtNomeCliente = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.rbPessoaFisica = new System.Windows.Forms.RadioButton();
+            this.rbPessoaJuridica = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
-            this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.tabControl1);
+            this.panel1.Controls.Add(this.groupBox3);
+            this.panel1.Controls.Add(this.groupBox1);
+            this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Location = new System.Drawing.Point(12, 10);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(691, 582);
+            this.panel1.Size = new System.Drawing.Size(674, 576);
             this.panel1.TabIndex = 0;
-            // 
-            // tabControl1
-            // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.Location = new System.Drawing.Point(10, 8);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(676, 566);
-            this.tabControl1.TabIndex = 14;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.BackColor = System.Drawing.Color.White;
-            this.tabPage1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tabPage1.Controls.Add(this.groupBox3);
-            this.tabPage1.Controls.Add(this.groupBox2);
-            this.tabPage1.Controls.Add(this.groupBox1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 29);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(668, 533);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Pessoa Física";
             // 
             // groupBox3
             // 
@@ -120,7 +96,7 @@
             this.groupBox3.Controls.Add(this.label15);
             this.groupBox3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.ForeColor = System.Drawing.Color.Black;
-            this.groupBox3.Location = new System.Drawing.Point(9, 375);
+            this.groupBox3.Location = new System.Drawing.Point(12, 417);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(649, 147);
             this.groupBox3.TabIndex = 11;
@@ -186,6 +162,147 @@
             this.label15.TabIndex = 0;
             this.label15.Text = "Celular:";
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.rbPessoaJuridica);
+            this.groupBox1.Controls.Add(this.rbPessoaFisica);
+            this.groupBox1.Controls.Add(this.lblFantasia);
+            this.groupBox1.Controls.Add(this.txtFantasia);
+            this.groupBox1.Controls.Add(this.txtDataNascimento);
+            this.groupBox1.Controls.Add(this.txtDocumento);
+            this.groupBox1.Controls.Add(this.txtOrgaoEmissor);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.txtRG);
+            this.groupBox1.Controls.Add(this.lblDocument);
+            this.groupBox1.Controls.Add(this.txtNomeClienteRazaoSocial);
+            this.groupBox1.Controls.Add(this.lblCliente);
+            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.Color.Black;
+            this.groupBox1.Location = new System.Drawing.Point(12, 8);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(649, 186);
+            this.groupBox1.TabIndex = 1;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Informações básica do cliente";
+            // 
+            // lblFantasia
+            // 
+            this.lblFantasia.AutoSize = true;
+            this.lblFantasia.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFantasia.Location = new System.Drawing.Point(348, 56);
+            this.lblFantasia.Name = "lblFantasia";
+            this.lblFantasia.Size = new System.Drawing.Size(0, 23);
+            this.lblFantasia.TabIndex = 10;
+            // 
+            // txtFantasia
+            // 
+            this.txtFantasia.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtFantasia.Enabled = false;
+            this.txtFantasia.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFantasia.Location = new System.Drawing.Point(352, 82);
+            this.txtFantasia.Name = "txtFantasia";
+            this.txtFantasia.Size = new System.Drawing.Size(286, 30);
+            this.txtFantasia.TabIndex = 3;
+            // 
+            // txtDataNascimento
+            // 
+            this.txtDataNascimento.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDataNascimento.Location = new System.Drawing.Point(10, 142);
+            this.txtDataNascimento.Mask = "99/99/9999";
+            this.txtDataNascimento.Name = "txtDataNascimento";
+            this.txtDataNascimento.Size = new System.Drawing.Size(165, 30);
+            this.txtDataNascimento.TabIndex = 4;
+            // 
+            // txtDocumento
+            // 
+            this.txtDocumento.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDocumento.Location = new System.Drawing.Point(181, 143);
+            this.txtDocumento.Mask = "999,999,999-99";
+            this.txtDocumento.Name = "txtDocumento";
+            this.txtDocumento.Size = new System.Drawing.Size(165, 30);
+            this.txtDocumento.TabIndex = 5;
+            this.txtDocumento.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            // 
+            // txtOrgaoEmissor
+            // 
+            this.txtOrgaoEmissor.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtOrgaoEmissor.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtOrgaoEmissor.Location = new System.Drawing.Point(523, 143);
+            this.txtOrgaoEmissor.Name = "txtOrgaoEmissor";
+            this.txtOrgaoEmissor.Size = new System.Drawing.Size(115, 30);
+            this.txtOrgaoEmissor.TabIndex = 7;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(519, 117);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(72, 23);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Emissor:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(348, 117);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(36, 23);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "RG:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(8, 116);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(113, 23);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Data de nasc:";
+            // 
+            // txtRG
+            // 
+            this.txtRG.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtRG.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRG.Location = new System.Drawing.Point(352, 143);
+            this.txtRG.Name = "txtRG";
+            this.txtRG.Size = new System.Drawing.Size(165, 30);
+            this.txtRG.TabIndex = 6;
+            // 
+            // lblDocument
+            // 
+            this.lblDocument.AutoSize = true;
+            this.lblDocument.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDocument.Location = new System.Drawing.Point(181, 117);
+            this.lblDocument.Name = "lblDocument";
+            this.lblDocument.Size = new System.Drawing.Size(43, 23);
+            this.lblDocument.TabIndex = 2;
+            this.lblDocument.Text = "CPF:";
+            // 
+            // txtNomeClienteRazaoSocial
+            // 
+            this.txtNomeClienteRazaoSocial.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtNomeClienteRazaoSocial.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNomeClienteRazaoSocial.Location = new System.Drawing.Point(10, 82);
+            this.txtNomeClienteRazaoSocial.Name = "txtNomeClienteRazaoSocial";
+            this.txtNomeClienteRazaoSocial.Size = new System.Drawing.Size(336, 30);
+            this.txtNomeClienteRazaoSocial.TabIndex = 2;
+            this.txtNomeClienteRazaoSocial.TabStop = false;
+            // 
+            // lblCliente
+            // 
+            this.lblCliente.AutoSize = true;
+            this.lblCliente.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCliente.Location = new System.Drawing.Point(8, 56);
+            this.lblCliente.Name = "lblCliente";
+            this.lblCliente.Size = new System.Drawing.Size(61, 23);
+            this.lblCliente.TabIndex = 0;
+            this.lblCliente.Text = "Nome:";
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.txtComplemento);
@@ -204,7 +321,7 @@
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.Black;
-            this.groupBox2.Location = new System.Drawing.Point(9, 159);
+            this.groupBox2.Location = new System.Drawing.Point(12, 201);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(649, 209);
             this.groupBox2.TabIndex = 10;
@@ -326,7 +443,7 @@
             this.txtCEP.Mask = "99999-999";
             this.txtCEP.Name = "txtCEP";
             this.txtCEP.Size = new System.Drawing.Size(165, 30);
-            this.txtCEP.TabIndex = 5;
+            this.txtCEP.TabIndex = 8;
             this.txtCEP.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // txtNumero
@@ -377,141 +494,12 @@
             this.label10.TabIndex = 0;
             this.label10.Text = "CEP:";
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.txtDataNascimento);
-            this.groupBox1.Controls.Add(this.txtCpf);
-            this.groupBox1.Controls.Add(this.txtOrgaoEmissor);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.txtRG);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.txtNomeCliente);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.ForeColor = System.Drawing.Color.Black;
-            this.groupBox1.Location = new System.Drawing.Point(9, 5);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(649, 149);
-            this.groupBox1.TabIndex = 1;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Informações básica do cliente";
-            // 
-            // txtDataNascimento
-            // 
-            this.txtDataNascimento.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDataNascimento.Location = new System.Drawing.Point(10, 104);
-            this.txtDataNascimento.Mask = "99/99/9999";
-            this.txtDataNascimento.Name = "txtDataNascimento";
-            this.txtDataNascimento.Size = new System.Drawing.Size(165, 30);
-            this.txtDataNascimento.TabIndex = 1;
-            // 
-            // txtCpf
-            // 
-            this.txtCpf.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCpf.Location = new System.Drawing.Point(181, 105);
-            this.txtCpf.Mask = "999,999,999-99";
-            this.txtCpf.Name = "txtCpf";
-            this.txtCpf.Size = new System.Drawing.Size(165, 30);
-            this.txtCpf.TabIndex = 2;
-            this.txtCpf.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
-            // 
-            // txtOrgaoEmissor
-            // 
-            this.txtOrgaoEmissor.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtOrgaoEmissor.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOrgaoEmissor.Location = new System.Drawing.Point(523, 105);
-            this.txtOrgaoEmissor.Name = "txtOrgaoEmissor";
-            this.txtOrgaoEmissor.Size = new System.Drawing.Size(115, 30);
-            this.txtOrgaoEmissor.TabIndex = 4;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(519, 79);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(72, 23);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Emissor:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(348, 79);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(36, 23);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "RG:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(8, 78);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(113, 23);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Data de nasc:";
-            // 
-            // txtRG
-            // 
-            this.txtRG.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtRG.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRG.Location = new System.Drawing.Point(352, 105);
-            this.txtRG.Name = "txtRG";
-            this.txtRG.Size = new System.Drawing.Size(165, 30);
-            this.txtRG.TabIndex = 3;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(181, 79);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 23);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "CPF:";
-            // 
-            // txtNomeCliente
-            // 
-            this.txtNomeCliente.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtNomeCliente.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNomeCliente.Location = new System.Drawing.Point(10, 44);
-            this.txtNomeCliente.Name = "txtNomeCliente";
-            this.txtNomeCliente.Size = new System.Drawing.Size(628, 30);
-            this.txtNomeCliente.TabIndex = 0;
-            this.txtNomeCliente.TabStop = false;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(8, 18);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(61, 23);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Nome:";
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.BackColor = System.Drawing.Color.White;
-            this.tabPage2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tabPage2.Location = new System.Drawing.Point(4, 29);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(668, 533);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Pessoa Jurídica";
-            // 
             // btnSalvar
             // 
             this.btnSalvar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSalvar.BackgroundImage")));
             this.btnSalvar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnSalvar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalvar.Location = new System.Drawing.Point(241, 599);
+            this.btnSalvar.Location = new System.Drawing.Point(217, 594);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(130, 41);
             this.btnSalvar.TabIndex = 18;
@@ -525,7 +513,7 @@
             this.btnCancelar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCancelar.BackgroundImage")));
             this.btnCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnCancelar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(377, 599);
+            this.btnCancelar.Location = new System.Drawing.Point(353, 594);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(158, 41);
             this.btnCancelar.TabIndex = 4;
@@ -535,12 +523,41 @@
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
+            // rbPessoaFisica
+            // 
+            this.rbPessoaFisica.AutoSize = true;
+            this.rbPessoaFisica.Checked = true;
+            this.rbPessoaFisica.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbPessoaFisica.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.rbPessoaFisica.Location = new System.Drawing.Point(10, 24);
+            this.rbPessoaFisica.Name = "rbPessoaFisica";
+            this.rbPessoaFisica.Size = new System.Drawing.Size(126, 25);
+            this.rbPessoaFisica.TabIndex = 0;
+            this.rbPessoaFisica.TabStop = true;
+            this.rbPessoaFisica.Text = "Pessoa Física";
+            this.rbPessoaFisica.UseVisualStyleBackColor = true;
+            this.rbPessoaFisica.CheckedChanged += new System.EventHandler(this.rbPessoaFisica_CheckedChanged);
+            // 
+            // rbPessoaJuridica
+            // 
+            this.rbPessoaJuridica.AutoSize = true;
+            this.rbPessoaJuridica.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbPessoaJuridica.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.rbPessoaJuridica.Location = new System.Drawing.Point(146, 24);
+            this.rbPessoaJuridica.Name = "rbPessoaJuridica";
+            this.rbPessoaJuridica.Size = new System.Drawing.Size(144, 25);
+            this.rbPessoaJuridica.TabIndex = 1;
+            this.rbPessoaJuridica.TabStop = true;
+            this.rbPessoaJuridica.Text = "Pessoa Jurídica";
+            this.rbPessoaJuridica.UseVisualStyleBackColor = true;
+            this.rbPessoaJuridica.CheckedChanged += new System.EventHandler(this.rbPessoaJuridica_CheckedChanged);
+            // 
             // FrmCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(715, 647);
+            this.ClientSize = new System.Drawing.Size(696, 644);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.panel1);
@@ -552,14 +569,12 @@
             this.Load += new System.EventHandler(this.FrmCliente_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmCliente_KeyDown);
             this.panel1.ResumeLayout(false);
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -567,17 +582,14 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txtNomeCliente;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtNomeClienteRazaoSocial;
+        private System.Windows.Forms.Label lblCliente;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtRG;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblDocument;
         private System.Windows.Forms.TextBox txtOrgaoEmissor;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -594,7 +606,7 @@
         private System.Windows.Forms.MaskedTextBox txtCelular;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.MaskedTextBox txtCpf;
+        private System.Windows.Forms.MaskedTextBox txtDocumento;
         private System.Windows.Forms.TextBox txtCidade;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label13;
@@ -605,5 +617,9 @@
         private System.Windows.Forms.TextBox txtComplemento;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.MaskedTextBox txtDataNascimento;
+        private System.Windows.Forms.Label lblFantasia;
+        private System.Windows.Forms.TextBox txtFantasia;
+        private System.Windows.Forms.RadioButton rbPessoaJuridica;
+        private System.Windows.Forms.RadioButton rbPessoaFisica;
     }
 }

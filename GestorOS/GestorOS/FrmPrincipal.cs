@@ -90,5 +90,11 @@ namespace GestorOS
             FrmCliente frm = new FrmCliente();
             frm.ShowDialog();
         }
+
+        private void serviçoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmServico frm = new FrmServico();
+            frm.ShowDialog();
+        }
     }
 }
